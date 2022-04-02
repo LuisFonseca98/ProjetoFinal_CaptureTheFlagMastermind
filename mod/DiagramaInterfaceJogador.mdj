@@ -1,0 +1,357 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"defaultDiagram": true,
+					"ownedViews": [
+						{
+							"_type": "UMLClassView",
+							"_id": "AAAAAAF/6uz2oJjV4e4=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAF/6uz2oZjWFv8=",
+									"_parent": {
+										"$ref": "AAAAAAF/6uz2oJjV4e4="
+									},
+									"model": {
+										"$ref": "AAAAAAF/6uz2n5jTjhs="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF/6uz2oZjX/DI=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjWFv8="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -32,
+											"top": 256,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF/6uz2oZjYSS8=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjWFv8="
+											},
+											"font": "Arial;13;1",
+											"left": 277,
+											"top": 263,
+											"width": 366,
+											"height": 13,
+											"text": "InterfaceJogador"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF/6uz2oZjZr/o=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjWFv8="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -32,
+											"top": 256,
+											"width": 73.67724609375,
+											"height": 13,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAF/6uz2oZjay58=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjWFv8="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -32,
+											"top": 256,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 272,
+									"top": 256,
+									"width": 376,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAF/6uz2oZjX/DI="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAF/6uz2oZjYSS8="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAF/6uz2oZjZr/o="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAF/6uz2oZjay58="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAF/6uz2oZjbxbA=",
+									"_parent": {
+										"$ref": "AAAAAAF/6uz2oJjV4e4="
+									},
+									"model": {
+										"$ref": "AAAAAAF/6uz2n5jTjhs="
+									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF/6u0/SpkAX6Y=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjbxbA="
+											},
+											"model": {
+												"$ref": "AAAAAAF/6u0/Qpj9ftI="
+											},
+											"font": "Arial;13;0",
+											"left": 277,
+											"top": 286,
+											"width": 366,
+											"height": 13,
+											"text": "+tempo: int",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 272,
+									"top": 281,
+									"width": 376,
+									"height": 23
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAF/6uz2oZjcpjc=",
+									"_parent": {
+										"$ref": "AAAAAAF/6uz2oJjV4e4="
+									},
+									"model": {
+										"$ref": "AAAAAAF/6uz2n5jTjhs="
+									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF/6u3K5ZkPd5s=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjcpjc="
+											},
+											"model": {
+												"$ref": "AAAAAAF/6u3K3JkM0do="
+											},
+											"font": "Arial;13;0",
+											"left": 277,
+											"top": 309,
+											"width": 366,
+											"height": 13,
+											"text": "+construirNaves(localConstrucao: Gameobject)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF/6u7/o5kWkOY=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjcpjc="
+											},
+											"model": {
+												"$ref": "AAAAAAF/6u7/npkTogg="
+											},
+											"font": "Arial;13;0",
+											"left": 277,
+											"top": 324,
+											"width": 366,
+											"height": 13,
+											"text": "+selecaoFrotas()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF/6u/pp5kg438=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjcpjc="
+											},
+											"model": {
+												"$ref": "AAAAAAF/6u/poJkduYU="
+											},
+											"font": "Arial;13;0",
+											"left": 277,
+											"top": 339,
+											"width": 366,
+											"height": 13,
+											"text": "+movimentarFrotas()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF/6vAM8Zknd2A=",
+											"_parent": {
+												"$ref": "AAAAAAF/6uz2oZjcpjc="
+											},
+											"model": {
+												"$ref": "AAAAAAF/6vAM7Jkk0ww="
+											},
+											"font": "Arial;13;0",
+											"left": 277,
+											"top": 354,
+											"width": 366,
+											"height": 13,
+											"text": "+selecaoNavesPerspetiva()",
+											"horizontalAlignment": 0
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 272,
+									"top": 304,
+									"width": 376,
+									"height": 68
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAF/6uz2oZjd4ns=",
+									"_parent": {
+										"$ref": "AAAAAAF/6uz2oJjV4e4="
+									},
+									"model": {
+										"$ref": "AAAAAAF/6uz2n5jTjhs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -16,
+									"top": 128,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAF/6uz2oZjePRk=",
+									"_parent": {
+										"$ref": "AAAAAAF/6uz2oJjV4e4="
+									},
+									"model": {
+										"$ref": "AAAAAAF/6uz2n5jTjhs="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -16,
+									"top": 128,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 272,
+							"top": 256,
+							"width": 376,
+							"height": 116,
+							"nameCompartment": {
+								"$ref": "AAAAAAF/6uz2oZjWFv8="
+							},
+							"attributeCompartment": {
+								"$ref": "AAAAAAF/6uz2oZjbxbA="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAF/6uz2oZjcpjc="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAF/6uz2oZjd4ns="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAF/6uz2oZjePRk="
+							}
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF/6uz2n5jTjhs=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "InterfaceJogador",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF/6u0/Qpj9ftI=",
+							"_parent": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"name": "tempo",
+							"type": "int"
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF/6u3K3JkM0do=",
+							"_parent": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"name": "construirNaves",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF/6u+u0ZkaG9M=",
+									"_parent": {
+										"$ref": "AAAAAAF/6u3K3JkM0do="
+									},
+									"name": "localConstrucao",
+									"type": "Gameobject"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF/6u7/npkTogg=",
+							"_parent": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"name": "selecaoFrotas"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF/6u/poJkduYU=",
+							"_parent": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"name": "movimentarFrotas"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF/6vAM7Jkk0ww=",
+							"_parent": {
+								"$ref": "AAAAAAF/6uz2n5jTjhs="
+							},
+							"name": "selecaoNavesPerspetiva"
+						}
+					]
+				}
+			]
+		}
+	]
+}
