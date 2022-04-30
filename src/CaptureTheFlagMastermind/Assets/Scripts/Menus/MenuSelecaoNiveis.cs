@@ -15,6 +15,6 @@ public class MenuSelecaoNiveis : Menu
 
     public void selecionarNivel()
     {
-        SceneManager.LoadScene("Level_1-1");
+        SceneManager.LoadScene("LoadingScreen");
     }
 }

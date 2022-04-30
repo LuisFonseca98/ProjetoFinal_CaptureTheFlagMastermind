@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UI_Manager : Menu
+
 {
-    
-    
+
+    public GameObject spaceShip;
+
     public void mostrarMenuPrincipal(){
        
     }
@@ -24,6 +26,7 @@ public class UI_Manager : Menu
 
 
     public void esconderMenuPrincipal(){
+        spaceShip.SetActive(false);
 
     }
 
