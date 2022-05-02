@@ -8,29 +8,31 @@ public class SpaceshipMov : MonoBehaviour
     Camera cam;
     NavMeshAgent myAgent;
     public LayerMask ground;
-    public static List<NavMeshAgent> meshAgents = new List<NavMeshAgent>();
+    //public static List<NavMeshAgent> meshAgents = new List<NavMeshAgent>();
 
     void Start()
     {
         cam = Camera.main;
         myAgent = GetComponent<NavMeshAgent>();
-        meshAgents.Add(myAgent);
+        //meshAgents.Add(myAgent);
     }
 
     void Update()
     {
-        if (meshAgents.Contains(myAgent))
+        /*if (meshAgents.Contains(myAgent))
         {
-            //absolutely nothing   
+            return;
         }
         else
         {
             meshAgents.Add(myAgent);
         }
-        if (Input.GetMouseButtonDown(1) && meshAgents.Contains(myAgent))
+        */
+        
+        if (Input.GetMouseButtonDown(1)) // && meshAgents.Contains(myAgent))
         {
-            if (meshAgents.IndexOf(myAgent) == 0)
-            {
+            //if (meshAgents.IndexOf(myAgent) == 0)
+            //{
                 RaycastHit hit;
                 Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
@@ -39,6 +41,7 @@ public class SpaceshipMov : MonoBehaviour
                     myAgent.SetDestination(hit.point);
                 }
 
+                /*
                 float angle = 60; // angular step
                 int countOnCircle = (int)(360 / angle); // max number in one round
                 int count = meshAgents.Count; // number of agents
@@ -62,13 +65,16 @@ public class SpaceshipMov : MonoBehaviour
                         randomizeAngle = Random.Range(0, angle);
                     }
                 }
-
-            }
+                
+                */
+            //}
         }
     }
 
-    void OnDisable()
+    /*void OnDisable()
     {
         meshAgents.Clear();
     }
+    */
+    
 }

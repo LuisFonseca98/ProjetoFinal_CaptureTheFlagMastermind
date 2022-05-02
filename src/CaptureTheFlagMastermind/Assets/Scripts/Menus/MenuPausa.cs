@@ -12,6 +12,12 @@ public class MenuPausa : Menu
     private string mainMenuScene = "Menus";
 
 
+
+    private void Start()
+    {
+        Debug.Log(Screen.width + "x" + Screen.height);
+
+    }
     // Update is called once per frame
     void Update()
     {
