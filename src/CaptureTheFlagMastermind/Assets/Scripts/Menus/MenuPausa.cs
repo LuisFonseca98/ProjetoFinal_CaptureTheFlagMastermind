@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,10 +8,9 @@ public class MenuPausa : Menu
     public GameObject PauseMenuUI;
 
     private string mainMenuScene = "Menus";
-
     private void Start()
     {
-        Debug.Log(Screen.width + "x" + Screen.height);
+        //Debug.Log(Screen.width + "x" + Screen.height);
 
     }
     // Update is called once per frame

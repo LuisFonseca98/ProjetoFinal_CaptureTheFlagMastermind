@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -8,61 +6,40 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
 
-    [SerializeField] string _volumeParameter = "MasterVolume";
-    [SerializeField] AudioMixer _mixer;
-    [SerializeField] Slider _slider;
-    [SerializeField] float _multiplier = 30f;
-    [SerializeField] Toggle _toggle;
-    private bool _disableToggleEvent;
+    [SerializeField] AudioMixer mixer;
+    [SerializeField] Slider musicSlider;
+    [SerializeField] Slider sfxSlider;
 
-    // Start is called before the first frame update
-
+    public const string MIXER_MUSIC = "Music";
+    public const string MIXER_SFX = "SFXVolume";
 
     private void Awake()
     {
-        _slider.onValueChanged.AddListener(HandleSliderValueChanged);
-        _toggle.onValueChanged.AddListener(HandleToggleValueChanged);
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
-    public void HandleToggleValueChanged(bool enableSound)
+    private void SetSFXVolume(float value)
     {
-        if (_disableToggleEvent)
-        {
-            return;
-        }
-        if (enableSound)
-        {
-            _slider.value = _slider.maxValue;
-        }
-        else
-        {
-            _slider.value = _slider.minValue;
-        }
+        mixer.SetFloat(MIXER_SFX, Mathf.Log10(value) * 20);
     }
 
-    public void HandleSliderValueChanged(float value)
+    private void SetMusicVolume(float value)
     {
-        _mixer.SetFloat(_volumeParameter, Mathf.Log10(value) * _multiplier);
-        _disableToggleEvent = true;
-        _toggle.isOn = _slider.value > _slider.minValue;
-        _disableToggleEvent = false;
-
+        mixer.SetFloat(MIXER_MUSIC,Mathf.Log10(value) * 20);
     }
 
-    public void OnDisable()
+    private void OnDisable()
     {
-        PlayerPrefs.SetFloat(_volumeParameter, _slider.value);
+        PlayerPrefs.SetFloat(AudioManager.MUSIC_KEY,musicSlider.value);
+        PlayerPrefs.SetFloat(AudioManager.SFX_KEY, sfxSlider.value);
     }
 
     void Start()
     {
-        _slider.value = PlayerPrefs.GetFloat(_volumeParameter,_slider.value);   
+        musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
+        sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.SFX_KEY, 1f);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
 }

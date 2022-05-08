@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class UnitClick : MonoBehaviour
 {
+
+    //variables for the camera and the marker gameobject
     private Camera myCam;
     public GameObject groundMarker;
 
+    //variables for the diferent layers
     public LayerMask clickable;
     public LayerMask ground;
+
+    //variables for the clickaudio
+    public List<AudioClip> clickAudio = new List<AudioClip>();
+    public AudioSource clickAudioSource;
+
+
     void Start()
     {
         myCam = Camera.main;
+       
     }
 
     // Update is called once per frame
@@ -54,10 +64,17 @@ public class UnitClick : MonoBehaviour
             if(Physics.Raycast(ray,out hit, Mathf.Infinity, ground))
             {
                 groundMarker.transform.position = hit.point;
+                GenerateRandomAudioClip();
                 groundMarker.SetActive(false);
                 groundMarker.SetActive(true);
             }
         }
+    }
+
+    private void GenerateRandomAudioClip()
+    {
+        clickAudioSource.clip = clickAudio[Random.Range(0, clickAudio.Count)];
+        clickAudioSource.PlayOneShot(clickAudioSource.clip);
     }
 
     
