@@ -10,10 +10,10 @@ public class MenuSelecaoNiveis : Menu
     //2º Usar SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1)
     // SceneManager.LoadScene(SceneManager.LoadScene(1))
     // SceneManager.LoadScene(SceneManager.LoadScene("Level 1-1"))
-    private string nomeNivel;
+    private string levelName;
 
 
-    public void selecionarNivel()
+    public void SelectLevel()
     {
         SceneManager.LoadScene("LoadingScreen");
     }

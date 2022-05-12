@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6745542259222465712}
   - component: {fileID: 6745542259222465727}
   m_Layer: 5
-  m_Name: SoldadoButton
+  m_Name: BuildSoldiersButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6745542260988344964}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: resume
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1388,7 +1388,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6745542260988344964}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: menuPausa
+        m_MethodName: PauseMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2494,7 +2494,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6745542260988344964}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: carregarMenuPrincipal
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2702,7 +2702,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6745542260988344964}
         m_TargetAssemblyTypeName: MenuPausa, Assembly-CSharp
-        m_MethodName: repetirNivel
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2993,7 +2993,7 @@ GameObject:
   - component: {fileID: 6745542260592940406}
   - component: {fileID: 6745542260592940405}
   m_Layer: 5
-  m_Name: SoldadoTitle
+  m_Name: BuildSoldiersTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3891,7 +3891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ativo: 0
-  PauseMenuUI: {fileID: 6745542259204466234}
+  pauseMenuUI: {fileID: 6745542259204466234}
 --- !u!114 &6745542260988344965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3904,8 +3904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cc69c6db4561e46826be2ac03b11aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldierSpaceship: {fileID: 0}
-  hunterSpaceship: {fileID: 0}
+  soldierSpaceship: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
+  hunterSpaceship: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
   parentSoldierSpaceship: {fileID: 0}
   parentHunterSpaceship: {fileID: 0}
   timeValue: 600
@@ -3928,7 +3928,7 @@ GameObject:
   - component: {fileID: 6745542261031498562}
   - component: {fileID: 6745542261031498561}
   m_Layer: 5
-  m_Name: "Ca\xE7asButton"
+  m_Name: BuildHuntersButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4317,7 +4317,7 @@ GameObject:
   - component: {fileID: 6745542261163686822}
   - component: {fileID: 6745542261163686821}
   m_Layer: 5
-  m_Name: CacaTitle
+  m_Name: BuildHuntersTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4370,7 +4370,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: 'H
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

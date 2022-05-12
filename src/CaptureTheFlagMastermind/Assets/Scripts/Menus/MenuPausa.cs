@@ -3,55 +3,56 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : Menu
 {
-    public static bool jogoEmModoPausa = false;
+    public static bool pauseMode = false;
 
-    public GameObject PauseMenuUI;
+    public GameObject pauseMenuUI;
 
     private string mainMenuScene = "Menus";
-    private void Start()
+    void Start()
     {
         //Debug.Log(Screen.width + "x" + Screen.height);
 
     }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (jogoEmModoPausa)
+            if (pauseMode)
             {
-                resume();
+                Resume();
             }
             else
             {
-                menuPausa();
+                PauseMenu();
             }
         }
     }
 
-    public void repetirNivel()
+    public void RestartLevel()
     {
         SceneManager.GetActiveScene();
         Debug.Log(SceneManager.GetActiveScene().name);
     }
 
 
-    public void resume()
+    public void Resume()
     {
-        PauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        jogoEmModoPausa = false;
+        pauseMode = false;
     }
 
-    public void menuPausa()
+    public void PauseMenu()
     {
-        PauseMenuUI.SetActive(true);
+        pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        jogoEmModoPausa = true;
+        pauseMode = true;
     }
 
 
-    public void carregarMenuPrincipal()
+    public void LoadMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(mainMenuScene);

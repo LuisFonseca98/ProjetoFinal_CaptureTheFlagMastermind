@@ -7,12 +7,12 @@ public class MenuOpcoes : Menu
 {
 
     public TMPro.TMP_Dropdown dropDownResolutions;
-    Resolution[] resolucoes;
+    Resolution[] resolutions;
 
 
-    private void Start()
+    void Start()
     {
-        resolucoes = Screen.resolutions;
+        resolutions = Screen.resolutions;
 
         dropDownResolutions.ClearOptions();
 
@@ -20,13 +20,13 @@ public class MenuOpcoes : Menu
 
 
         int currentResolutionIndex = 0;
-        for (int i = 0; i < resolucoes.Length; i++)
+        for (int i = 0; i < resolutions.Length; i++)
         {
-            string option = resolucoes[i].width + "x" + resolucoes[i].height;
+            string option = resolutions[i].width + "x" + resolutions[i].height;
             options.Add(option);
 
-            if (resolucoes[i].width == Screen.currentResolution.width &&
-                resolucoes[i].height == Screen.currentResolution.height)
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolutionIndex = i;
             }
@@ -37,19 +37,19 @@ public class MenuOpcoes : Menu
         dropDownResolutions.RefreshShownValue();
     }
 
-    public void mostrarDiferentesResolucoes(int indexResolucao){
-        Resolution resolucao = resolucoes[indexResolucao];
-        Screen.SetResolution(resolucao.width, resolucao.height, Screen.fullScreen);
+    public void ShowDiferentResolutions(int resolutionIndex){
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         
     }
 
-    public void alterarGraficos(int indexGraficos)
+    public void ChangeGraphics(int graphicsIndex)
     {
-        QualitySettings.SetQualityLevel(indexGraficos);
+        QualitySettings.SetQualityLevel(graphicsIndex);
     }
 
-    public void ativarModoTelacheia(bool telaCheia)
+    public void ActivateFullscreen(bool fullscreen)
     {
-        Screen.fullScreen = telaCheia;
+        Screen.fullScreen = fullscreen;
     }
 }

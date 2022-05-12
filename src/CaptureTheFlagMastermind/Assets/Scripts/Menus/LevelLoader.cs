@@ -9,7 +9,6 @@ public class LevelLoader: MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
-
     public int loadSceneIndex = 0;
 
     void Start()

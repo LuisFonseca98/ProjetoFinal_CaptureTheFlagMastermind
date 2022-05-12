@@ -1952,8 +1952,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1614020133}
         m_TargetAssemblyTypeName: MenuOpcoes, Assembly-CSharp
-        m_MethodName: alterarGraficos
-        m_Mode: 3
+        m_MethodName: ChangeGraphics
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2088,8 +2088,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1614020133}
         m_TargetAssemblyTypeName: MenuOpcoes, Assembly-CSharp
-        m_MethodName: ativarModoTelacheia
-        m_Mode: 6
+        m_MethodName: ActivateFullscreen
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2324,8 +2324,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1614020133}
         m_TargetAssemblyTypeName: MenuOpcoes, Assembly-CSharp
-        m_MethodName: mostrarDiferentesResolucoes
-        m_Mode: 3
+        m_MethodName: ShowDiferentResolutions
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3798,7 +3798,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1653386740}
         m_TargetAssemblyTypeName: MenuSelecaoNiveis, Assembly-CSharp
-        m_MethodName: selecionarNivel
+        m_MethodName: SelectLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4096,18 +4096,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 199392145}
-        m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: esconderMenuPrincipal
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6933,6 +6921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a490249cf6db5946a18cd724b650bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 8118b3aa7d164aa4c874dfd6e624d6c8, type: 2}
 --- !u!1 &1520476524
 GameObject:
   m_ObjectHideFlags: 0
@@ -9032,10 +9021,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2210378468692906326, guid: 47881e02dbf46c34a9fa431c910fea43, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2210378468692906327, guid: 47881e02dbf46c34a9fa431c910fea43, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9080,6 +9065,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2210378468692906326, guid: 47881e02dbf46c34a9fa431c910fea43, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47881e02dbf46c34a9fa431c910fea43, type: 3}
