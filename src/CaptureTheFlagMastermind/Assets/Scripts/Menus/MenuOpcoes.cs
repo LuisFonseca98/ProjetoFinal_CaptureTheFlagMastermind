@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuOpcoes : Menu
+public class MenuOpcoes : MonoBehaviour
 {
 
     public TMPro.TMP_Dropdown dropDownResolutions;
@@ -37,7 +37,7 @@ public class MenuOpcoes : Menu
         dropDownResolutions.RefreshShownValue();
     }
 
-    public void ShowDiferentResolutions(int resolutionIndex){
+    public void ShowDifferentResolutions(int resolutionIndex){
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         

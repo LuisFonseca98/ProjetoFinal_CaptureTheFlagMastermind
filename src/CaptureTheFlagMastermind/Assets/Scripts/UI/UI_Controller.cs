@@ -22,6 +22,7 @@ public class UI_Controller : MonoBehaviour
     //reference to the gameobjects
     public GameObject endGameScreen;
     public GameObject playerUI;
+    public GameObject unitSelectionSystem;
 
     //reference to the audiosource
     public AudioSource gameoverAudio;
@@ -80,7 +81,9 @@ public class UI_Controller : MonoBehaviour
             stopIncreasingReputation = false;
             endGameScreen.SetActive(true);
             playerUI.SetActive(false);
+            unitSelectionSystem.SetActive(false);
             gameoverAudio.Play();
+
 
 
         }

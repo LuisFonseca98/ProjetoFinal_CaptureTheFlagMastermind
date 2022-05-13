@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4166732054000911158}
   - component: {fileID: 4166732054000911161}
   m_Layer: 0
-  m_Name: UnitySelections
+  m_Name: UnitSelections
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,12 +99,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4166732054196969540}
   m_Layer: 0
-  m_Name: UnitySelectionSystem
+  m_Name: UnitSelectionSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4166732054196969540
 Transform:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef82456608e99741b26c6cb7dc41839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundMarker: {fileID: 0}
+  groundMarker: {fileID: 3557036567398227363, guid: fb99b3c9b20c52c4cb25f2e9800fb44e, type: 3}
   clickable:
     serializedVersion: 2
     m_Bits: 256

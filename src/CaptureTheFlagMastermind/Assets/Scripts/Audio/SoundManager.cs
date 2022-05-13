@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,9 +11,17 @@ public class SoundManager : MonoBehaviour
     [SerializeField] Slider sfxSlider;
 
     public const string MIXER_MUSIC = "Music";
-    public const string MIXER_SFX = "SFXVolume";
+    public const string MIXER_SFX = "SFX";
 
-    private void Awake()
+    void Start()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
+        sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.SFX_KEY, 1f);
+
+    }
+
+
+    void Awake()
     {
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(SetSFXVolume);
@@ -35,11 +43,8 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat(AudioManager.SFX_KEY, sfxSlider.value);
     }
 
-    void Start()
-    {
-        musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
-        sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.SFX_KEY, 1f);
 
-    }
+
+   
 
 }

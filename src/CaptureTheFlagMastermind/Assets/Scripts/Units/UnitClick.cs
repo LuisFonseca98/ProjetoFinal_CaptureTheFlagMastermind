@@ -13,10 +13,6 @@ public class UnitClick : MonoBehaviour
     public LayerMask clickable;
     public LayerMask ground;
 
-    //variables for the clickaudio
-    public List<AudioClip> clickAudio = new List<AudioClip>();
-    public AudioSource clickAudioSource;
-
 
     void Start()
     {
@@ -64,18 +60,11 @@ public class UnitClick : MonoBehaviour
             if(Physics.Raycast(ray,out hit, Mathf.Infinity, ground))
             {
                 groundMarker.transform.position = hit.point;
-                GenerateRandomAudioClip();
+                AudioManager.instance.GenerateRandomAudioClip();
                 groundMarker.SetActive(false);
                 groundMarker.SetActive(true);
             }
         }
     }
-
-    private void GenerateRandomAudioClip()
-    {
-        clickAudioSource.clip = clickAudio[Random.Range(0, clickAudio.Count)];
-        clickAudioSource.PlayOneShot(clickAudioSource.clip);
-    }
-
     
 }

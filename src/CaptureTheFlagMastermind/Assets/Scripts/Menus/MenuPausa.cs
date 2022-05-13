@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPausa : Menu
+public class MenuPausa : MenusManager
 {
     public static bool pauseMode = false;
 
     public GameObject pauseMenuUI;
 
-    private string mainMenuScene = "Menus";
+    public GameObject unitSelectionSystem;
+
+
     void Start()
     {
         //Debug.Log(Screen.width + "x" + Screen.height);
@@ -30,16 +32,10 @@ public class MenuPausa : Menu
         }
     }
 
-    public void RestartLevel()
-    {
-        SceneManager.GetActiveScene();
-        Debug.Log(SceneManager.GetActiveScene().name);
-    }
-
-
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
+        unitSelectionSystem.SetActive(true);
         Time.timeScale = 1f;
         pauseMode = false;
     }
@@ -47,20 +43,9 @@ public class MenuPausa : Menu
     public void PauseMenu()
     {
         pauseMenuUI.SetActive(true);
+        unitSelectionSystem.SetActive(false);
         Time.timeScale = 0f;
         pauseMode = true;
     }
 
-
-    public void LoadMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(mainMenuScene);
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("Quitting Game!");
-        Application.Quit();
-    }
 }
