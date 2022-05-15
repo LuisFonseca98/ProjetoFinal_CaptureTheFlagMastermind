@@ -11,6 +11,7 @@ public class Bullet_Behavior : MonoBehaviour
             //shipHp = 0;
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            AudioManager.instance.DamageSound();
         }
     }
 }
