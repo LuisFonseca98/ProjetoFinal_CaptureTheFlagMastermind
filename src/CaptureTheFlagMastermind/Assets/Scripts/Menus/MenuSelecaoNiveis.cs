@@ -17,10 +17,8 @@ public class MenuSelecaoNiveis : MonoBehaviour
         if(index == 0)
         {
             SceneManager.LoadScene("Level_1_1");
-            Debug.Log("Selecionei o nivel 1-1");
         }else if (index == 1) { 
             SceneManager.LoadScene("Level_1_2");
-            Debug.Log("Selecionei o nivel 1-2");
         }
 
     }
