@@ -10,11 +10,18 @@ public class MenuSelecaoNiveis : MonoBehaviour
     //2º Usar SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1)
     // SceneManager.LoadScene(SceneManager.LoadScene(1))
     // SceneManager.LoadScene(SceneManager.LoadScene("Level 1-1"))
-    private string levelName;
 
-
-    public void SelectLevel()
+    public void SelectLevel(int index)
     {
-        SceneManager.LoadScene("LoadingScreen");
+
+        if(index == 0)
+        {
+            SceneManager.LoadScene("Level_1_1");
+            Debug.Log("Selecionei o nivel 1-1");
+        }else if (index == 1) { 
+            SceneManager.LoadScene("Level_1_2");
+            Debug.Log("Selecionei o nivel 1-2");
+        }
+
     }
 }

@@ -239,6 +239,10 @@ PrefabInstance:
       value: Soldado (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -306,6 +310,10 @@ PrefabInstance:
     - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
       propertyPath: m_Name
       value: "Ca\xE7a"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
       propertyPath: m_TagString
@@ -382,6 +390,10 @@ PrefabInstance:
       value: Soldado
       objectReference: {fileID: 0}
     - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -449,6 +461,10 @@ PrefabInstance:
     - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
       propertyPath: m_Name
       value: "Ca\xE7a (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4198425518221555151, guid: 8e9040ccc3b39c741a3a52494528967d, type: 3}
       propertyPath: m_TagString
@@ -802,6 +818,10 @@ PrefabInstance:
       value: Mothership
       objectReference: {fileID: 0}
     - target: {fileID: 8837352183694291767, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837352183694291767, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -862,6 +882,10 @@ PrefabInstance:
     - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
       propertyPath: m_Name
       value: Soldado (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8261781887191136269, guid: 647ad773eb208f94489400dff5312fa0, type: 3}
       propertyPath: m_TagString
@@ -998,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2143261485112211871, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.8
+      value: 0.799998
       objectReference: {fileID: 0}
     - target: {fileID: 2143261485112211871, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1050,7 +1074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2143261486589134538, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.8
+      value: 0.799998
       objectReference: {fileID: 0}
     - target: {fileID: 2143261486589134538, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1058,11 +1082,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2143261486589134538, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.8
+      value: 0.799998
       objectReference: {fileID: 0}
     - target: {fileID: 2143261486821835753, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 296
+      objectReference: {fileID: 0}
+    - target: {fileID: 2143261486821835767, guid: e133105cde8799c47944dd048a1927dc, type: 3}
+      propertyPath: m_MinValue
+      value: 0.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2862774783835934618, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_IsActive
@@ -1577,8 +1605,8 @@ MonoBehaviour:
   walkPointRange: 50
   timeBetweenAttacks: 5
   projectile: {fileID: 600181341}
-  sightRange: 20
-  attackRange: 15
+  sightRange: 15
+  attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!195 &1688998308
@@ -1591,8 +1619,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 11
+  m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

@@ -1,8 +1,7 @@
-﻿
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAiTutorial : MonoBehaviour
+public class Beubeu : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -39,8 +38,8 @@ public class EnemyAiTutorial : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
-        //if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        //if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+        if (playerInAttackRange && playerInSightRange) AttackPlayer();
     }
 
     private void Patroling()
