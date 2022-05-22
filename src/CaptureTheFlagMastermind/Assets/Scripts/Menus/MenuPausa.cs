@@ -27,7 +27,7 @@ public class MenuPausa : MenusManager
             }
             else
             {
-                PauseMenu();
+                ShowPauseMenu();
             }
         }
     }
@@ -40,7 +40,7 @@ public class MenuPausa : MenusManager
         pauseMode = false;
     }
 
-    public void PauseMenu()
+    public void ShowPauseMenu()
     {
         pauseMenuUI.SetActive(true);
         unitSelectionSystem.SetActive(false);

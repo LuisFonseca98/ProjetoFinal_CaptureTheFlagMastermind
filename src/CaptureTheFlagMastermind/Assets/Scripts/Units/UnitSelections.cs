@@ -30,7 +30,7 @@ public class UnitSelections : MonoBehaviour
 
     public void ClickSelect(GameObject unitToAdd)
     {
-        DeselectAll();
+        DeselectAll(); 
         unitsSelected.Add(unitToAdd);
         unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         unitToAdd.GetComponent<SpaceshipMov>().enabled = true;

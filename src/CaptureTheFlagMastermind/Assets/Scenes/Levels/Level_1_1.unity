@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 910aece150e81f04e8582acd5a347793, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4134db5e945567f458a2c90abc883d5c, type: 2}
 --- !u!1001 &196960384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -281,6 +281,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2143261485225130756, guid: e133105cde8799c47944dd048a1927dc, type: 3}
   m_PrefabInstance: {fileID: 1210478743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &300530570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8837352184123087970, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
+  m_PrefabInstance: {fileID: 864476998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &419107444
 PrefabInstance:
@@ -722,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837352183694291760, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.4
+      value: 27.11
       objectReference: {fileID: 0}
     - target: {fileID: 8837352183694291760, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1143,6 +1148,14 @@ PrefabInstance:
       propertyPath: unitSelectionSystem
       value: 
       objectReference: {fileID: 598446743}
+    - target: {fileID: 2862774785281119013, guid: e133105cde8799c47944dd048a1927dc, type: 3}
+      propertyPath: parentHunterSpaceship
+      value: 
+      objectReference: {fileID: 300530570}
+    - target: {fileID: 2862774785281119013, guid: e133105cde8799c47944dd048a1927dc, type: 3}
+      propertyPath: parentSoldierSpaceship
+      value: 
+      objectReference: {fileID: 1455268505}
     - target: {fileID: 2862774785281119023, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1428,6 +1441,11 @@ PrefabInstance:
       objectReference: {fileID: 1498990609}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a510281d38ae7d94e953a6ba74bab484, type: 3}
+--- !u!4 &1455268505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8837352183748878210, guid: 628f6ba8952dd4941a571145440f3a17, type: 3}
+  m_PrefabInstance: {fileID: 864476998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498990609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3557036567398227363, guid: fb99b3c9b20c52c4cb25f2e9800fb44e, type: 3}
@@ -1530,7 +1548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1688998307
 MonoBehaviour:
   m_ObjectHideFlags: 0

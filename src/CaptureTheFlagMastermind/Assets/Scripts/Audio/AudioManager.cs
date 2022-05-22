@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioMixer mixer;
     [SerializeField] AudioSource clickAudioSource;
+    //[SerializeField] AudioSource explosionAudioSource;
     [SerializeField] AudioSource damageAudioSource;
     [SerializeField] List<AudioClip> clickAudio = new List<AudioClip>();
     [SerializeField] AudioClip damageSound;
@@ -55,6 +56,12 @@ public class AudioManager : MonoBehaviour
     {
         damageAudioSource.PlayOneShot(damageSound);
     }
+
+    /*public void ExplosionSound()
+    {
+
+    }
+    */
 
 
 }

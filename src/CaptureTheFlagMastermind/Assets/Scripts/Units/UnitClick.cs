@@ -23,13 +23,22 @@ public class UnitClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        
+        SelectDiferentUnits();
+        SendUnitsWithClick();
+
+    }
+
+
+    public void SelectDiferentUnits()
+    {
+        if (Input.GetMouseButtonDown(0)) //LMB 
         {
             //if we hit a clickable object
             RaycastHit hit;
             Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hit,Mathf.Infinity, clickable))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable))
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
@@ -51,13 +60,16 @@ public class UnitClick : MonoBehaviour
                 }
             }
         }
+    }
 
-        if (Input.GetMouseButtonDown(1))
+    public void SendUnitsWithClick()
+    {
+        if (Input.GetMouseButtonDown(1)) //RMB
         {
             RaycastHit hit;
             Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray,out hit, Mathf.Infinity, ground))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, ground))
             {
                 groundMarker.transform.position = hit.point;
                 AudioManager.instance.GenerateRandomAudioClip();
