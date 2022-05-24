@@ -8,6 +8,7 @@ TagManager:
   - MothershipAlly
   - AllySpaceship
   - Bullet
+  - Obstacule
   layers:
   - Default
   - TransparentFX

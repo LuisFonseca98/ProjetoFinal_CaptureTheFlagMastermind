@@ -13,12 +13,13 @@ public class UIManager : MonoBehaviour
     public GameObject selectAboutMenu;
     public GameObject selectLevelsPlanetUrdak;
     public GameObject selectLevelsPlanetXanax;
-    public GameObject pauseMenu;
+    public GameObject spaceShip;
 
 
     public void ShowSelectPlanetsMenu()
     {
         HideAllMenus();
+        spaceShip.SetActive(false);
         selectPlanetsMenu.SetActive(true);
 
     }
@@ -39,6 +40,23 @@ public class UIManager : MonoBehaviour
     {
         HideAllMenus();
         selectOptionsMenu.SetActive(true);
+    }
+    
+    public void ShowLevelsPlanetUrdak()
+    {
+        selectLevelsPlanetUrdak.SetActive(true);
+        selectLevelsPlanetXanax.SetActive(false);
+    }
+
+    public void ShowLevelsPlanetXanax()
+    {
+        selectLevelsPlanetUrdak.SetActive(false);
+        selectLevelsPlanetXanax.SetActive(true);
+    }
+
+    public void ShowGame()
+    {
+        SceneManager.LoadScene("Level_1_1");
     }
 
     
@@ -61,29 +79,10 @@ public class UIManager : MonoBehaviour
     public void HideSelectPlanetsMenu()
     {
         HideAllMenus();
+        selectPlanetsMenu.SetActive(false);
         mainMenu.SetActive(true);
-    }
+        spaceShip.SetActive(true);
 
-    public void ShowLevelsPlanetUrdak()
-    {
-        selectLevelsPlanetUrdak.SetActive(true);
-        selectLevelsPlanetXanax.SetActive(false);
-    }
-
-    public void ShowLevelsPlanetXanax()
-    {
-        selectLevelsPlanetUrdak.SetActive(false);
-        selectLevelsPlanetXanax.SetActive(true);
-    }
-
-    public void ShowGame()
-    {
-        SceneManager.LoadScene("Level_1_1");
-    }
-
-    public void ShowPauseMenu()
-    {
-        pauseMenu.SetActive(true);
     }
 
 

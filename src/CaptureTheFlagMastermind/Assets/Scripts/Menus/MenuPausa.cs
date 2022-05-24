@@ -9,6 +9,8 @@ public class MenuPausa : MenusManager
 
     public GameObject unitSelectionSystem;
 
+    public GameObject optionsMenu;
+
 
     void Start()
     {
@@ -46,6 +48,16 @@ public class MenuPausa : MenusManager
         unitSelectionSystem.SetActive(false);
         Time.timeScale = 0f;
         pauseMode = true;
+    }
+
+    public void ShowOptionsMenu()
+    {
+        optionsMenu.SetActive(true);    
+    }
+
+    public void HideOptionsMenu()
+    {
+        optionsMenu.SetActive(false);
     }
 
 }
