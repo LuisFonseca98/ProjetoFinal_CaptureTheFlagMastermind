@@ -9,6 +9,7 @@ TagManager:
   - AllySpaceship
   - Bullet
   - Obstacule
+  - Bullet_player
   layers:
   - Default
   - TransparentFX
