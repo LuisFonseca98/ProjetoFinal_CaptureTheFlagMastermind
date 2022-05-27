@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16883713, g: 0.12477399, b: 0.13327023, a: 1}
+  m_IndirectSpecularColor: {r: 0.17330003, g: 0.12936011, b: 0.13837656, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2122,6 +2122,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302489451}
   m_CullTransparentMesh: 1
+--- !u!82 &312178680 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6005869996860655229, guid: 47881e02dbf46c34a9fa431c910fea43, type: 3}
+  m_PrefabInstance: {fileID: 2210378470350873425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &335022462
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,7 +5067,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1433868878}
+        - m_Target: {fileID: 312178680}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1
@@ -7328,7 +7333,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1433868878}
+        - m_Target: {fileID: 312178680}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1
@@ -7992,7 +7997,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1433868878}
+        - m_Target: {fileID: 312178680}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1
@@ -10055,7 +10060,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1433868878}
+        - m_Target: {fileID: 312178680}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1

@@ -24,8 +24,6 @@ public class UIController : MonoBehaviour
     public GameObject playerUI;
     public GameObject unitSelectionSystem;
 
-    //reference to the audiosource
-    public AudioSource gameoverAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -82,9 +80,8 @@ public class UIController : MonoBehaviour
             endGameScreen.SetActive(true);
             playerUI.SetActive(false);
             unitSelectionSystem.SetActive(false);
-            gameoverAudio.Play();
-
-
+            AudioManager.instance.StopMainMenuSound();
+            AudioManager.instance.GameOverSound();
 
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuOpcoes : MonoBehaviour
+public class OptionsMenu : MonoBehaviour
 {
 
     public TMPro.TMP_Dropdown dropDownResolutions;

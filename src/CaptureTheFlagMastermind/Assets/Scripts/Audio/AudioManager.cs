@@ -10,11 +10,24 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField] AudioMixer mixer;
+
+    // the different audio sources
+    [SerializeField] AudioSource mainMenuSource;
     [SerializeField] AudioSource clickAudioSource;
-    //[SerializeField] AudioSource explosionAudioSource;
+    [SerializeField] AudioSource gameoverSource;
+    [SerializeField] AudioSource victorySource;
+    [SerializeField] AudioSource explosionAudioSource;
     [SerializeField] AudioSource damageAudioSource;
+    //[SerializeField] AudioSource mouseOverBtnSource;
+
+    //audio clips 
     [SerializeField] List<AudioClip> clickAudio = new List<AudioClip>();
+    [SerializeField] AudioClip mainMenuSound;
     [SerializeField] AudioClip damageSound;
+    [SerializeField] AudioClip victorySound;
+    [SerializeField] AudioClip gameOverSound;
+    //[SerializeField] AudioClip mouseOverBtnClip;
+
 
     public const string MUSIC_KEY = "Music";
     public const string SFX_KEY = "SFX";
@@ -57,11 +70,36 @@ public class AudioManager : MonoBehaviour
         damageAudioSource.PlayOneShot(damageSound);
     }
 
-    /*public void ExplosionSound()
+    public void ExplosionSound()
     {
+     explosionAudioSource.PlayOneShot(damageSound);
+    }
 
+    public void VictorySound()
+    {
+        victorySource.PlayOneShot(victorySound);
+    }
+
+    public void GameOverSound()
+    {
+        gameoverSource.PlayOneShot(gameOverSound);
+    }
+
+    public void MainMenuSound()
+    {
+        mainMenuSource.PlayOneShot(mainMenuSound);
+    }
+
+    public void StopMainMenuSound()
+    {
+        mainMenuSource.Stop();
+    }
+
+
+    /*public void MouseOverButtonSound()
+    {
+        mouseOverBtnSource.PlayOneShot(mouseOverBtnClip);
     }
     */
-
 
 }

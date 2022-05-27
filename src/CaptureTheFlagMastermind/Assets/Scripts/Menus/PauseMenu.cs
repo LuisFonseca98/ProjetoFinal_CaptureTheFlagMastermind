@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPausa : MenusManager
+public class PauseMenu : MenusManager
 {
     public static bool pauseMode = false;
 
