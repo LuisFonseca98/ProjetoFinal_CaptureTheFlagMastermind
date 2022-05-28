@@ -3818,8 +3818,9 @@ MonoBehaviour:
   hunterSpaceship: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
   parentSoldierSpaceship: {fileID: 3197496927454632564, guid: 391b8d230b8454849a68e7e24f9ae884, type: 3}
   parentHunterSpaceship: {fileID: 4285434130147595182, guid: bfdd9e939e55746488d360f51c86e857, type: 3}
-  timeValue: 500
+  timeValue: 300
   reputationValue: 150
+  stopIncreasingReputation: 0
   timerText: {fileID: 2862774783758811106}
   reputationCounterText: {fileID: 2862774785700484889}
   endGameScreen: {fileID: 2862774785358180126}

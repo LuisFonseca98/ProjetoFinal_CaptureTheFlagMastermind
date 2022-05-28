@@ -6,20 +6,23 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
 
-    //variables for the diferent spaceships
-    public GameObject soldierSpaceship, hunterSpaceship;
-    public Transform parentSoldierSpaceship, parentHunterSpaceship;
+    [Header("Spaceship variables")]
+    public GameObject soldierSpaceship;
+    public GameObject hunterSpaceship;
+    public Transform parentSoldierSpaceship;
+    public Transform parentHunterSpaceship;
 
-    //variables of the diferent values
+    [Header("Player UI")]
     public float timeValue = 300;
     public float reputationValue = 150;
-    private bool stopIncreasingReputation;
+    [SerializeField] bool stopIncreasingReputation;
 
-    //variables for the timer and reputation text
+    [Header("Reference variables")]
     public TMP_Text timerText;
     public TMP_Text reputationCounterText;
 
-    //reference to the gameobjects
+
+    [Header("Diffrent Gameobjects ")]
     public GameObject endGameScreen;
     public GameObject playerUI;
     public GameObject unitSelectionSystem;
