@@ -22,11 +22,6 @@ public class UIController : MonoBehaviour
     public TMP_Text reputationCounterText;
 
 
-    [Header("Diffrent Gameobjects ")]
-    public GameObject endGameScreen;
-    public GameObject playerUI;
-    public GameObject unitSelectionSystem;
-
 
     // Start is called before the first frame update
     void Start()
@@ -76,15 +71,11 @@ public class UIController : MonoBehaviour
     {
         if (timeToDisplay < 0)
         {
-
             timeToDisplay = 0;
-            Time.timeScale = 0f;
             stopIncreasingReputation = false;
-            endGameScreen.SetActive(true);
-            playerUI.SetActive(false);
-            unitSelectionSystem.SetActive(false);
             AudioManager.instance.StopMainMenuSound();
             AudioManager.instance.GameOverSound();
+            GetComponent<GameOverMenu>().enabled = true;
 
         }
 

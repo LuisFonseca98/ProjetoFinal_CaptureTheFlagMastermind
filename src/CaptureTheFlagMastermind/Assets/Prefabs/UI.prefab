@@ -1584,7 +1584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2862774784316637429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5073675508089699446}
+        m_TargetAssemblyTypeName: VictoryMenu, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2862774784360350168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,7 +1757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2862774785281119012}
+      - m_Target: {fileID: 5680100255182128242}
         m_TargetAssemblyTypeName: MenusManager, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -2488,7 +2500,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2862774785281119012}
+      - m_Target: {fileID: 5680100255182128242}
         m_TargetAssemblyTypeName: MenusManager, Assembly-CSharp
         m_MethodName: BackToMainMenu
         m_Mode: 1
@@ -3697,6 +3709,8 @@ GameObject:
   - component: {fileID: 2862774785281119013}
   - component: {fileID: 8154430710249880106}
   - component: {fileID: 7812273582938749979}
+  - component: {fileID: 5680100255182128242}
+  - component: {fileID: 5073675508089699446}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -3823,9 +3837,6 @@ MonoBehaviour:
   stopIncreasingReputation: 0
   timerText: {fileID: 2862774783758811106}
   reputationCounterText: {fileID: 2862774785700484889}
-  endGameScreen: {fileID: 2862774785358180126}
-  playerUI: {fileID: 2862774783967284503}
-  unitSelectionSystem: {fileID: 4166732054196969541, guid: a510281d38ae7d94e953a6ba74bab484, type: 3}
 --- !u!114 &8154430710249880106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3854,6 +3865,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropDownResolutions: {fileID: 8837258118668749667}
+--- !u!114 &5680100255182128242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862774785281119023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd742b8b75be24987e80eb3a81e316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameScreen: {fileID: 2862774785358180126}
+  playerUI: {fileID: 2862774783967284503}
+  unitSelectionSystem: {fileID: 0}
+--- !u!114 &5073675508089699446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862774785281119023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5170c0423a8e7e8429cf27d88b626306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryScreen: {fileID: 2862774785114771470}
+  playerUI: {fileID: 2862774783967284503}
+  unitSelectionSystem: {fileID: 0}
 --- !u!1 &2862774785358180126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,7 +4094,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2862774785644502820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5073675508089699446}
+        m_TargetAssemblyTypeName: MenusManager, Assembly-CSharp
+        m_MethodName: BackToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2862774785700484967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4597,6 +4650,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 955247968871628455, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
+--- !u!1 &8837258117200069439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 955247968871628449, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
+  m_PrefabInstance: {fileID: 8639460550862208414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8837258118668749667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 955247967086081789, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
@@ -4633,10 +4691,5 @@ MonoBehaviour:
 --- !u!224 &8837258117200069432 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 955247968871628454, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
-  m_PrefabInstance: {fileID: 8639460550862208414}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8837258117200069439 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 955247968871628449, guid: 498ad47b75b554a409677a9f311672d1, type: 3}
   m_PrefabInstance: {fileID: 8639460550862208414}
   m_PrefabAsset: {fileID: 0}
