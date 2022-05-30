@@ -36,6 +36,7 @@ public class UnitSelections : MonoBehaviour
         unitsSelected.Add(unitToAdd);
         unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
+        unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
         unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
     }
 
@@ -46,6 +47,7 @@ public class UnitSelections : MonoBehaviour
             unitsSelected.Add(unitToAdd);
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
             unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
+            unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
             unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
 
         }
@@ -54,6 +56,7 @@ public class UnitSelections : MonoBehaviour
             unitToAdd.GetComponent<SpaceshipMov>().enabled = false;
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
             unitToAdd.transform.GetChild(3).gameObject.SetActive(false);
+            unitToAdd.transform.GetChild(4).gameObject.SetActive(false);
             unitsSelected.Remove(unitToAdd);
         }
     }
@@ -65,6 +68,7 @@ public class UnitSelections : MonoBehaviour
             unitsSelected.Add(unitToAdd);
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
             unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
+            unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
             unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
         }
     }
@@ -76,6 +80,8 @@ public class UnitSelections : MonoBehaviour
             unit.GetComponent<SpaceshipMov>().enabled = false;
             unit.transform.GetChild(0).gameObject.SetActive(false);
             unit.transform.GetChild(3).gameObject.SetActive(false);
+            unit.transform.GetChild(4).gameObject.SetActive(false);
+
         }
         unitsSelected.Clear();
     }
