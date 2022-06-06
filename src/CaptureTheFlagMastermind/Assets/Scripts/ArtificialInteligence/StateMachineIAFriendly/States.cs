@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class MothershipSpaceship : MonoBehaviour
+public enum States
 {
-    
+    IDLE,
+    SELECTED,
+    MOVE,
+    CHASE,
+    ATTACK
 }

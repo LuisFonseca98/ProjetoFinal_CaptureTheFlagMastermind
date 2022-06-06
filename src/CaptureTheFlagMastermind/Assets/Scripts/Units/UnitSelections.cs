@@ -49,12 +49,11 @@ public class UnitSelections : MonoBehaviour
             unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
             unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
             unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
-
         }
         else
         {
             unitToAdd.GetComponent<SpaceshipMov>().enabled = false;
-            unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+            unitToAdd.transform.GetChild(0).gameObject.SetActive(false);
             unitToAdd.transform.GetChild(3).gameObject.SetActive(false);
             unitToAdd.transform.GetChild(4).gameObject.SetActive(false);
             unitsSelected.Remove(unitToAdd);
