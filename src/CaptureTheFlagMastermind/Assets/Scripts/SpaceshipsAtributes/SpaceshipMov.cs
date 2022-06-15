@@ -8,88 +8,86 @@ public class SpaceshipMov : MonoBehaviour
     Camera cam;
     NavMeshAgent myAgent;
     public LayerMask ground;
-    //public static List<NavMeshAgent> meshAgents = new List<NavMeshAgent>();
 
-    //ataque
+    //Variables for the attack state
     public NavMeshAgent agent;
-    public Transform player;
-    public LayerMask whatIsGround, whatIsPlayer;
+    public Transform enemyFleet;
+    public LayerMask whatIsGround, whatIsEnemy;
     public float health;
 
     //Attacking
     public float timeBetweenAttacks;
-    bool alreadyAttacked;
     public GameObject projectile;
+    bool alreadyAttacked;
 
     //States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public bool enemyInSightRange, enemyInAttackRange;
 
 
     private void Awake()
     {
-        player = GameObject.FindWithTag("enemy").transform;
+        enemyFleet = GameObject.Find("EnemyFleet").transform;
         agent = GetComponent<NavMeshAgent>();
-    }
-
-    void Start()
-    {
-        cam = Camera.main;
         myAgent = GetComponent<NavMeshAgent>();
-        //meshAgents.Add(myAgent);
+        cam = Camera.main;
     }
 
     void Update()
     {
-     //ataque
-     //Check for sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        //if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        enemyInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsEnemy);
+        enemyInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsEnemy);
+        if (enemyInSightRange && !enemyInAttackRange) ChaseEnemySpaceship();
+        if (enemyInAttackRange && enemyInSightRange) AttackEnemySpaceship();
 
-    
+        
+        SendSpaceshipToLocation();
 
+    }
+
+    public void SendSpaceshipToLocation()
+    {
+        RaycastHit hit;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(1))
         {
-
-            RaycastHit hit;
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, ground))
             {
                 myAgent.SetDestination(hit.point);
-                //myAgent.
             }
-
-            
         }
+
+        
+
+
+
     }
 
 
-    private void ChasePlayer()
+    private void ChaseEnemySpaceship()
     {
-        agent.SetDestination(player.position);
+
+        if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
+        {
+            agent.SetDestination(enemyFleet.transform.GetChild(0).position);
+        }
+
     }
 
-    private void AttackPlayer()
+    private void AttackEnemySpaceship()
     {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
-
-        transform.LookAt(player);
+        if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
+        {
+            agent.SetDestination(transform.position);
+            transform.LookAt(enemyFleet.transform.GetChild(0).position);
+        }
 
         if (!alreadyAttacked)
         {
-            ///Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
-
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -99,17 +97,6 @@ public class SpaceshipMov : MonoBehaviour
         alreadyAttacked = false;
     }
 
-  //  public void TakeDamage(int damage)
-   // {
-   //     health -= damage;
-
-   //     if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-   // }
-
-   // private void DestroyEnemy()
-   // {
-    //    Destroy(gameObject);
-    //}
 
     private void OnDrawGizmosSelected()
     {

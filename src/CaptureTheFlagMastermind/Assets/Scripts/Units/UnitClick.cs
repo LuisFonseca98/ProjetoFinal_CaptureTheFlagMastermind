@@ -49,7 +49,6 @@ public class UnitClick : MonoBehaviour
                 {
                     //normal clicked
                     UnitSelections.Instance.ClickSelect(hit.collider.gameObject);
-
                 }
             }
             else
@@ -57,6 +56,7 @@ public class UnitClick : MonoBehaviour
                 if (!Input.GetKey(KeyCode.RightShift))
                 {
                     UnitSelections.Instance.DeselectAll();
+
                 }
             }
         }
@@ -79,5 +79,7 @@ public class UnitClick : MonoBehaviour
             }
         }
     }
+
     
+
 }

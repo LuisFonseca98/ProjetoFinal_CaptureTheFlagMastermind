@@ -5,10 +5,8 @@ using UnityEngine.AI;
 
 public class AttackBehaviour : AIBehaviour
 {
-	//private Animator animator;
 	
 	private Transform player;
-	
 	
 	public  AttackBehaviour(AIAgent agent) : base(agent)
 	{
@@ -35,7 +33,7 @@ public class AttackBehaviour : AIBehaviour
 	public override void Update()
 	{
 		
-		if( ! AIUtils.HasVision(agent.transform, player.position))
+		if(!AIUtils.HasVision(agent.transform, player.position))
 		{
 			agent.HandleEvent(AIEvent.LostTarget);
 		}
@@ -53,12 +51,12 @@ public class AttackBehaviour : AIBehaviour
 		
 		while(true)
 		{
-			//animator.SetTrigger("attack");
-
 			yield return new WaitForSeconds(5);
 		}
 		
 	}
+
+
 	
 	
     

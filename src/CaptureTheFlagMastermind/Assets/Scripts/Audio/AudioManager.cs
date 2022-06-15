@@ -95,11 +95,14 @@ public class AudioManager : MonoBehaviour
         mainMenuSource.Stop();
     }
 
-
-    /*public void MouseOverButtonSound()
+    public void StopExplosionSound()
     {
-        mouseOverBtnSource.PlayOneShot(mouseOverBtnClip);
+        explosionAudioSource.Stop();
     }
-    */
+
+    public void StopDamageSound()
+    {
+        damageAudioSource.Stop();
+    }
 
 }

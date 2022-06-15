@@ -23,7 +23,7 @@ public class Demon : AIAgent
        agent = GetComponent<NavMeshAgent>();
 	   animator = GetComponent<Animator>();
 	   
-	   stateMachine = new DemonStateMachine();
+	   stateMachine = new SpaceshipAllyStateMachine();
 	   
 	   behaviours = new Dictionary<AIState,AIBehaviour>();
 	   behaviours.Add(AIState.Idle, new IdleBehaviour(this));

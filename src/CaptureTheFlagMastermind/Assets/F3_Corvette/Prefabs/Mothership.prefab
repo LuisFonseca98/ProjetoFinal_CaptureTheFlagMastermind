@@ -29276,7 +29276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7294522226028034159}
   - component: {fileID: 5433389171490602970}
-  - component: {fileID: 4208789765308881948}
   m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
@@ -29342,14 +29341,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4208789765308881948
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6598639986989660019}
-  m_Enabled: 1
 --- !u!1 &6814439555190842326
 GameObject:
   m_ObjectHideFlags: 0
@@ -39126,15 +39117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39182,7 +39173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_Name
-      value: F3_Green Variant
+      value: Mothership
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
       propertyPath: m_Layer
@@ -39220,22 +39211,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 24d54da20b07b7d4bb94aa91d81e854b, type: 3}
   m_PrefabInstance: {fileID: 1860650225668353174}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &5017804589490889243
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7706704133163136415}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!65 &2543375656808210721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39261,6 +39236,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e0534a1cd7b4544834e884abdbf286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4009095064534405008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706704133163136415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0c6fa621ed762488c4f4496b364647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 655725293080971711}
+  mothershipHP: 200
+--- !u!114 &6612210078370305485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706704133163136415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd742b8b75be24987e80eb3a81e316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameScreen: {fileID: 0}
+  playerUI: {fileID: 0}
+  unitSelectionSystem: {fileID: 0}
 --- !u!114 &7006312265895980877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39276,21 +39280,21 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 128
-  agent: {fileID: 0}
-  player: {fileID: 0}
+  agent: {fileID: 8975419474187915377}
+  enemyFleet: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  whatIsPlayer:
+    m_Bits: 128
+  whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   health: 0
   timeBetweenAttacks: 0
   projectile: {fileID: 0}
-  sightRange: 0
-  attackRange: 0
-  playerInSightRange: 0
-  playerInAttackRange: 0
+  sightRange: 35
+  attackRange: 35
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
 --- !u!195 &8975419474187915377
 NavMeshAgent:
   m_ObjectHideFlags: 0

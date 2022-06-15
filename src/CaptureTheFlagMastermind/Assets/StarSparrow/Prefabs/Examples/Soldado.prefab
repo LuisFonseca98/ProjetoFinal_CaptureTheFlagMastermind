@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7328866134223065277}
   - component: {fileID: 4618117488998484132}
   - component: {fileID: 466401729275562916}
+  - component: {fileID: 4120364297208423001}
   m_Layer: 8
   m_Name: Soldado
   m_TagString: Player
@@ -40,7 +41,7 @@ Transform:
   - {fileID: 806058127400825425}
   - {fileID: 2919133239357663381}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33871795789200940
 MeshFilter:
@@ -119,21 +120,21 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 128
-  agent: {fileID: 0}
-  player: {fileID: 0}
+  agent: {fileID: 4618117488998484132}
+  enemyFleet: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  whatIsPlayer:
+    m_Bits: 128
+  whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
-  health: 0
-  timeBetweenAttacks: 0
+  health: 100
+  timeBetweenAttacks: 2
   projectile: {fileID: 0}
-  sightRange: 0
-  attackRange: 0
-  playerInSightRange: 0
-  playerInAttackRange: 0
+  sightRange: 75
+  attackRange: 50
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
 --- !u!195 &4618117488998484132
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -169,6 +170,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.745908, y: 2.880384, z: 13.023569}
   m_Center: {x: 0, y: -0.000014603138, z: -0.0000023841858}
+--- !u!114 &4120364297208423001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734771206656390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4360f8f529fcb458d89781bb2261a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1243707684074345502}
+  hunterHP: 125
 --- !u!1 &574565713136896465
 GameObject:
   m_ObjectHideFlags: 0
@@ -10564,7 +10579,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2919133239357663381}
   - component: {fileID: 6259505042236124875}
-  - component: {fileID: 5673712635667541142}
   m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
@@ -10630,14 +10644,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5673712635667541142
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4846532834628263437}
-  m_Enabled: 1
 --- !u!1 &4890441588351908046
 GameObject:
   m_ObjectHideFlags: 0

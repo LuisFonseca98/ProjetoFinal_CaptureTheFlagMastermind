@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenu : MenusManager
+public interface UIInterface
 {
-   
+    void Start();
+
+
+    void Update();
 }

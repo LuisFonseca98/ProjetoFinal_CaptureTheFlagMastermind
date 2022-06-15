@@ -101,6 +101,7 @@ public class UnitDrag : MonoBehaviour
         foreach (var unit in UnitSelections.Instance.unitList)
         {
             if (selectionBox.Contains(myCam.WorldToScreenPoint(unit.transform.position))){
+                UnitSelections.Instance.DeactiveWindowSpaceshipInfo();
                 UnitSelections.Instance.DragSelect(unit);
             }
 

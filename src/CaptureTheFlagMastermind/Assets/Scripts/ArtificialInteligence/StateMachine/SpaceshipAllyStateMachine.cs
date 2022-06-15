@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class DemonStateMachine : StateMachine
+public class SpaceshipAllyStateMachine : StateMachine
 {
 	
 	public AIState GetNextState(AIState current, AIEvent aIEvent)

@@ -27,6 +27,7 @@ public class VictoryMenu : MenusManager
 
     public void LoadNextLevel()
     {
+        //Time.timeScale = 1f;
         SceneManager.LoadScene("Level_1_2");
     }
 

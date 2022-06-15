@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2816689011472003952}
   - component: {fileID: 8971796953413797668}
   - component: {fileID: 7820712565897512578}
+  - component: {fileID: 6309234538561072142}
   m_Layer: 8
   m_Name: "Ca\xE7a"
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1510364872509504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8539272690169623714}
@@ -118,22 +119,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground:
     serializedVersion: 2
-    m_Bits: 384
-  agent: {fileID: 0}
-  player: {fileID: 0}
+    m_Bits: 128
+  agent: {fileID: 8971796953413797668}
+  enemyFleet: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  whatIsPlayer:
+    m_Bits: 128
+  whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   health: 0
   timeBetweenAttacks: 0
-  projectile: {fileID: 0}
-  sightRange: 0
-  attackRange: 0
-  playerInSightRange: 0
-  playerInAttackRange: 0
+  projectile: {fileID: 638634334751071329, guid: bb0c66a8507c0ad419a8880cd83e4893, type: 3}
+  sightRange: 35
+  attackRange: 25
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
 --- !u!195 &8971796953413797668
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -169,6 +170,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.638825, y: 3.256053, z: 10.850526}
   m_Center: {x: 0, y: -0.0000007748604, z: 0}
+--- !u!114 &6309234538561072142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510364872509504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9e5f78bfb69f642bbfdf7d43bef50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 2670097484237210346}
+  hunterHP: 125
 --- !u!1 &112353598050226223
 GameObject:
   m_ObjectHideFlags: 0
@@ -10348,7 +10363,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8712645026023437056}
   - component: {fileID: 6196716728248121030}
-  - component: {fileID: 6083783403114275387}
   m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
@@ -10414,14 +10428,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6083783403114275387
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3131434756510303325}
-  m_Enabled: 1
 --- !u!1 &3214240141446920378
 GameObject:
   m_ObjectHideFlags: 0
@@ -25810,6 +25816,7 @@ GameObject:
   - component: {fileID: 5417804460974171764}
   - component: {fileID: 4541517853799115772}
   - component: {fileID: 2635298366186086598}
+  - component: {fileID: 7501242061052923105}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25902,6 +25909,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7501242061052923105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920313035225254323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd119ac87e8b754e86bac1b84279ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7394224980296172069
 GameObject:
   m_ObjectHideFlags: 0
@@ -26138,7 +26157,6 @@ GameObject:
   - component: {fileID: 2700576536204569138}
   - component: {fileID: 4513352962621468646}
   - component: {fileID: 2670097484237210346}
-  - component: {fileID: 8404405182655323601}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -26204,19 +26222,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8404405182655323601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8880401685371175738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cff3e3980587414a9070943b25825fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 2670097484237210346}
 --- !u!1 &8923451785557892135
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AI;
 
 
-public class UIController : MonoBehaviour
+public class UIController : MonoBehaviour,UIInterface
 {
 
     [Header("Spaceship variables")]
@@ -21,17 +22,13 @@ public class UIController : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text reputationCounterText;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         stopIncreasingReputation = true;
         StartCoroutine(ReputationCounterIncreasing());
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (timeValue > 0)
         {
@@ -44,8 +41,6 @@ public class UIController : MonoBehaviour
 
         DisplayTime(timeValue);
     }
-
-
 
 
     public void BuildHunterSpaceship()
@@ -69,7 +64,7 @@ public class UIController : MonoBehaviour
 
     private void DisplayTime(float timeToDisplay)
     {
-        if (timeToDisplay < 0)
+        if (timeToDisplay < 0 )
         {
             timeToDisplay = 0;
             stopIncreasingReputation = false;
@@ -77,6 +72,13 @@ public class UIController : MonoBehaviour
             AudioManager.instance.GameOverSound();
             GetComponent<GameOverMenu>().enabled = true;
 
+        }
+
+        else if (MothershipSpaceship.mothershipHP <= 0)
+        {
+            stopIncreasingReputation = false;
+            AudioManager.instance.StopMainMenuSound();
+            GetComponent<GameOverMenu>().enabled = true;
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
@@ -96,4 +98,6 @@ public class UIController : MonoBehaviour
             reputationValue += 2;
         }
     }
+
+    
 }

@@ -6,12 +6,13 @@ public interface Spaceship
 {
 
 
-    void Awake();
-
     void Update();
 
-    void Movement();
+    void TakeDamageFromEnemyBullet(float damage);
+
+    void Die();
 
     void OnCollisionEnter(Collision collision);
+
 
 }

@@ -7,12 +7,17 @@ public abstract class MenusManager: MonoBehaviour
 {
     public void BackToMainMenu()
     {
+        Debug.Log("Main Menu is back bitches!");
         SceneManager.LoadScene("Menus");
+        Time.timeScale = 1f;
+
     }
 
     public void RestartLevel()
     {
-        SceneManager.GetActiveScene();
+        Debug.Log("Restart Level pls!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()

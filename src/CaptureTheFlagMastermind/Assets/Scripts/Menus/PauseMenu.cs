@@ -4,11 +4,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MenusManager
 {
     public static bool pauseMode = false;
-
     public GameObject pauseMenuUI;
-
     public GameObject unitSelectionSystem;
-
     public GameObject optionsMenu;
 
 
