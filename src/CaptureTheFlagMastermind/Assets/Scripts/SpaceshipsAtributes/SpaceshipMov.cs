@@ -11,9 +11,8 @@ public class SpaceshipMov : MonoBehaviour
 
     //Variables for the attack state
     public NavMeshAgent agent;
-    public Transform enemyFleet;
+    private Transform enemyFleet;
     public LayerMask whatIsGround, whatIsEnemy;
-    public float health;
 
     //Attacking
     public float timeBetweenAttacks;

@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelLoader: MonoBehaviour
+public class LevelLoader : MonoBehaviour
 {
 
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
-    public int loadSceneIndex = 0;
+    public int loadSceneIndex = 2;
 
     void Start()
     {

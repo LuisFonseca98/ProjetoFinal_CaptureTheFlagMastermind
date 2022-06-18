@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4166732054196969540}
   m_RootOrder: 2
@@ -71,6 +72,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4166732054196969540}
   m_RootOrder: 0
@@ -89,6 +91,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitList: []
   unitsSelected: []
+  displayInfoWindowSpaceship: {fileID: 0}
+  nameSpaceship: {fileID: 0}
+  accValue: {fileID: 0}
+  velValue: {fileID: 0}
 --- !u!1 &4166732054196969541
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4166732054196969540
 Transform:
   m_ObjectHideFlags: 0
@@ -115,6 +121,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4166732054000911158}
   - {fileID: 4166732055047752444}
@@ -149,6 +156,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4166732054196969540}
   m_RootOrder: 1

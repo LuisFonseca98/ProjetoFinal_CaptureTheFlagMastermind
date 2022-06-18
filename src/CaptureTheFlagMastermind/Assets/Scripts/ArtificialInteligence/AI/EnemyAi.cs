@@ -1,7 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class EnemyAi : MonoBehaviour
 {
@@ -24,14 +24,18 @@ public class EnemyAi : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //public Dictionary<string, GameObject> spaceships = new Dictionary<string, GameObject>();
+
     void Awake()
     {
+        //addElements();
         fleet = GameObject.Find("Fleet").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
@@ -43,7 +47,6 @@ public class EnemyAi : MonoBehaviour
 
     private void Patroling()
     {
-
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -67,27 +70,40 @@ public class EnemyAi : MonoBehaviour
             walkPointSet = true;
     }
 
+    /*private void addElements()
+    {
+        Unit[] unitsGO = fleet.GetComponentsInChildren<Unit>();
+        foreach (Unit unit in unitsGO)
+        {
+            spaceships.Add(unit.name, unit.gameObject);
+        }
+    }
+    */
+
     private void ChasePlayer()
     {
+
         if (fleet.transform.Find("Soldier") || fleet.transform.Find("Hunter") || fleet.transform.Find("Mothership"))
         {
             agent.SetDestination(fleet.transform.GetChild(0).position);
         }
 
+        
+
     }
 
     private void AttackPlayer()
     {
+
+
         
         if (fleet.transform.Find("Soldier") || fleet.transform.Find("Hunter") || fleet.transform.Find("Mothership"))
         {
             agent.SetDestination(transform.position);
             transform.LookAt(fleet.transform.GetChild(0).position);
         }
-        else
-        {
-            StartCoroutine(BackToPatrol());
-        }
+
+        
 
         if (!alreadyAttacked)
         {
@@ -119,4 +135,5 @@ public class EnemyAi : MonoBehaviour
         yield return new WaitForSeconds(3);
         Patroling();
     }
+
 }

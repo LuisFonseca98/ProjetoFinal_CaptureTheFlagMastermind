@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 1243707684074345502}
-  hunterHP: 125
+  soldierHP: 125
 --- !u!1 &574565713136896465
 GameObject:
   m_ObjectHideFlags: 0
@@ -21327,7 +21327,6 @@ GameObject:
   - component: {fileID: 8285521302415614339}
   - component: {fileID: 499003052984960392}
   - component: {fileID: 1243707684074345502}
-  - component: {fileID: 8765533513626884528}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -21393,19 +21392,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8765533513626884528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9008408439273450954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cff3e3980587414a9070943b25825fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1243707684074345502}
 --- !u!1 &9062519015438981597
 GameObject:
   m_ObjectHideFlags: 0

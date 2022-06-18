@@ -16,9 +16,16 @@ public class SelectLevelsMenu : MonoBehaviour
 
         if(index == 0)
         {
-            SceneManager.LoadScene("Level_1_1");
-        }else if (index == 1) { 
+            SceneManager.LoadScene("LoadingScreen");
+            //SceneManager.LoadScene("Level_1_1");
+        }
+        else if (index == 1)
+        {
             SceneManager.LoadScene("Level_1_2");
+        }
+        else if (index == 2)
+        {
+            SceneManager.LoadScene("Level_1_3");
         }
 
     }

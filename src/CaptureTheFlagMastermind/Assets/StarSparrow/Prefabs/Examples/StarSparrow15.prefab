@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 2079920311513257197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6400861709145198265}
@@ -316,9 +316,8 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
-  health: 100
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 15
+  walkPointRange: 30
   timeBetweenAttacks: 2
   projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
   sightRange: 30
