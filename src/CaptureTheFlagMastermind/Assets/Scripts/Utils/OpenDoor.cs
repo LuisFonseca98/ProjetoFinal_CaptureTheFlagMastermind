@@ -6,11 +6,11 @@ public class OpenDoor : MonoBehaviour
 {
     public GameObject Door;
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.GetComponent<Collider>().gameObject.layer == LayerMask.NameToLayer("Clickable") || other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Yay2!");
             Door.SetActive(false);
         }
     }

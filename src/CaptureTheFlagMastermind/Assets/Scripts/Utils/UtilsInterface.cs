@@ -6,6 +6,4 @@ public interface UtilsInterface
 {
     void Update();
 
-    IEnumerator DestroyProjectile();
-
 }

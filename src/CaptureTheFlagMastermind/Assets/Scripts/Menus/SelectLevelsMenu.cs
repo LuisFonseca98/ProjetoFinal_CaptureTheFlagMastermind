@@ -11,22 +11,23 @@ public class SelectLevelsMenu : MonoBehaviour
     // SceneManager.LoadScene(SceneManager.LoadScene(1))
     // SceneManager.LoadScene(SceneManager.LoadScene("Level 1-1"))
 
+    public static int indexScene;
+
     public void SelectLevel(int index)
     {
-
-        if(index == 0)
+        indexScene = index;
+        if(indexScene == 2 || indexScene == 3 || indexScene == 4)
         {
-            SceneManager.LoadScene("LoadingScreen");
-            //SceneManager.LoadScene("Level_1_1");
-        }
-        else if (index == 1)
-        {
-            SceneManager.LoadScene("Level_1_2");
-        }
-        else if (index == 2)
-        {
-            SceneManager.LoadScene("Level_1_3");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
 
+
+    }
+
+
+    public static int getIndexScene()
+    {
+        return indexScene;
     }
 }

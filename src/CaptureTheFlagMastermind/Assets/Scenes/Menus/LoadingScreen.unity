@@ -349,7 +349,6 @@ MonoBehaviour:
   slider: {fileID: 1014430401}
   progressText: {fileID: 1305319785}
   loadSceneIndex: 0
-  scenes: 020000000300000004000000
 --- !u!1 &957696616
 GameObject:
   m_ObjectHideFlags: 0

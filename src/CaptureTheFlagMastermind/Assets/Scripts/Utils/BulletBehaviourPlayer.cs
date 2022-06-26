@@ -48,15 +48,18 @@ public class BulletBehaviourPlayer : MonoBehaviour, UtilsInterface
     */
 
 
-    public IEnumerator DestroyProjectile()
-    {
-        yield return new WaitForSeconds(6);
-        Destroy(gameObject);
-    }
-
     public void Update()
     {
-        StartCoroutine(DestroyProjectile());
 
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Clickable") || collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Balla Inimiga Destruída!");
+            Destroy(gameObject);
+        }
     }
 }

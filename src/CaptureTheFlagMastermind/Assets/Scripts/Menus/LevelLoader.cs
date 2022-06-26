@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
-    public int loadSceneIndex = 2;
+    public int loadSceneIndex;
 
     void Start()
     {
@@ -19,6 +19,23 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadAsynchronously(int sceneIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadSceneIndex = SelectLevelsMenu.getIndexScene();
+
+        if (loadSceneIndex == 2)
+        {
+            operation = SceneManager.LoadSceneAsync((SceneManager.GetActiveScene().buildIndex + 1));
+        }
+        else if (loadSceneIndex == 3)
+        {
+            operation = SceneManager.LoadSceneAsync((SceneManager.GetActiveScene().buildIndex + 2));
+        }
+
+        else if (loadSceneIndex == 4)
+        {
+            operation = SceneManager.LoadSceneAsync((SceneManager.GetActiveScene().buildIndex + 3));
+        }
+
         loadingScreen.SetActive(true);
         while (!operation.isDone)
         {

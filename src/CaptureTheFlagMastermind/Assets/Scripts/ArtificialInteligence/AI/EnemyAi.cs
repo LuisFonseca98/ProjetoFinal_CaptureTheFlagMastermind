@@ -130,10 +130,4 @@ public class EnemyAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 
-    private IEnumerator BackToPatrol()
-    {
-        yield return new WaitForSeconds(3);
-        Patroling();
-    }
-
 }

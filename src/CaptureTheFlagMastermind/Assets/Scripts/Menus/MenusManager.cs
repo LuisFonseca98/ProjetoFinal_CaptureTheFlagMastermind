@@ -7,7 +7,7 @@ public abstract class MenusManager: MonoBehaviour
 {
     public void BackToMainMenu()
     {
-        Debug.Log("Main Menu is back bitches!");
+        Debug.Log("Main Menu is back!");
         SceneManager.LoadScene("Menus");
         Time.timeScale = 1f;
 

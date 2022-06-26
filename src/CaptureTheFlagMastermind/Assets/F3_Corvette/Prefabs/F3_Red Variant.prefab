@@ -76,6 +76,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8220d65260758dc4e8e264a8b326363f, type: 3}
   m_PrefabInstance: {fileID: 6437459314171317192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &775003779862329899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3060088426372616897}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5170c0423a8e7e8429cf27d88b626306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryScreen: {fileID: 0}
+  playerUI: {fileID: 0}
+  unitSelectionSystem: {fileID: 0}
 --- !u!195 &5381031227876997847
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -119,25 +134,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 15
+  walkPointRange: 100
   timeBetweenAttacks: 2
   projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
   sightRange: 30
   attackRange: 15
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!114 &775003779862329899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3060088426372616897}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5170c0423a8e7e8429cf27d88b626306, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryScreen: {fileID: 0}
-  playerUI: {fileID: 0}
-  unitSelectionSystem: {fileID: 0}

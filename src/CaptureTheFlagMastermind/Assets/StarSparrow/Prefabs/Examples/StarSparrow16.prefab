@@ -733,6 +733,7 @@ GameObject:
   - component: {fileID: 4837655254358366933}
   - component: {fileID: 7261555887914216991}
   - component: {fileID: 3526009638393012275}
+  - component: {fileID: 6870771676789673067}
   m_Layer: 0
   m_Name: StarSparrow16
   m_TagString: Untagged
@@ -828,3 +829,31 @@ NavMeshAgent:
   m_BaseOffset: 1.6229593
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6870771676789673067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207265202862182346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3d1a99dec7baa44949e2fec59be465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 3526009638393012275}
+  fleet: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 30
+  timeBetweenAttacks: 2
+  projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
+  sightRange: 30
+  attackRange: 15
+  playerInSightRange: 0
+  playerInAttackRange: 0
