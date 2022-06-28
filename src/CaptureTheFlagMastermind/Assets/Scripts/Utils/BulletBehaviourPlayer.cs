@@ -50,11 +50,10 @@ public class BulletBehaviourPlayer : MonoBehaviour, UtilsInterface
 
     public void Update()
     {
-
+        throw new System.NotImplementedException();
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Clickable") || collision.gameObject.CompareTag("Player"))
         {
@@ -62,4 +61,10 @@ public class BulletBehaviourPlayer : MonoBehaviour, UtilsInterface
             Destroy(gameObject);
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        throw new System.NotImplementedException();
+    }
+
 }

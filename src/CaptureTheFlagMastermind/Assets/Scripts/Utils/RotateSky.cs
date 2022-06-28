@@ -11,6 +11,16 @@ public class RotateSky : MonoBehaviour,UtilsInterface
         throw new System.NotImplementedException();
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time * RotateSpeed);

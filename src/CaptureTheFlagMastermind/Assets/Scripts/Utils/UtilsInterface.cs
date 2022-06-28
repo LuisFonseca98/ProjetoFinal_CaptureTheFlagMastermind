@@ -4,6 +4,10 @@ using UnityEngine;
 
 public interface UtilsInterface
 {
-    void Update();
+    public void Update();
+
+    public void OnCollisionEnter(Collision collision);
+
+    public void OnTriggerEnter(Collider other);
 
 }

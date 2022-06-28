@@ -26,11 +26,12 @@ public class SpaceshipStateMachine : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+
         agent = GetComponent<NavMeshAgent>();
         myAgent = GetComponent<NavMeshAgent>();
         state = States.IDLE;
         myCam = Camera.main;
-        enemy = GameObject.FindWithTag("enemy").transform;
+        enemy = GameObject.Find("EnemyFleet").transform;
         _instance = this;
 
     }

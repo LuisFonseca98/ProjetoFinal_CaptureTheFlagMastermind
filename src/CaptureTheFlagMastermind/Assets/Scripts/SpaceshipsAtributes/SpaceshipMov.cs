@@ -67,7 +67,7 @@ public class SpaceshipMov : MonoBehaviour
 
     private void ChaseEnemySpaceship()
     {
-
+        Debug.Log("Entrei1");
         if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
         {
             agent.SetDestination(enemyFleet.transform.GetChild(0).position);
@@ -77,6 +77,7 @@ public class SpaceshipMov : MonoBehaviour
 
     private void AttackEnemySpaceship()
     {
+        Debug.Log("Entrei2");
         if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
         {
             agent.SetDestination(transform.position);

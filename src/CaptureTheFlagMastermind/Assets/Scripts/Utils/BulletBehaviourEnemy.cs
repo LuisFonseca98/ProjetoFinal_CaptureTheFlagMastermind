@@ -11,12 +11,17 @@ public class BulletBehaviourEnemy : MonoBehaviour, UtilsInterface
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Clickable") || collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Balla Inimiga Destruída!");
             Destroy(gameObject);
         }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        throw new System.NotImplementedException();
     }
 }
