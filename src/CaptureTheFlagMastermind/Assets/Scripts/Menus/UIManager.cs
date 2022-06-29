@@ -97,5 +97,10 @@ public class UIManager : MonoBehaviour
         selectLevelsPlanetXanax.SetActive(false);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 
 }
