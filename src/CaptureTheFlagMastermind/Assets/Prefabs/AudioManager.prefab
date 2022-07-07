@@ -192,8 +192,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 31fdf10dd0d023b42b6ae8f6045195bf, type: 3}
   mainMenuSound: {fileID: 8300000, guid: a83c1ba5f3f75af43a9e104f35a6b667, type: 3}
   damageSound: {fileID: 8300000, guid: e81ae6a804250c445931b1a41131ad9d, type: 3}
-  victorySound: {fileID: 8300000, guid: 30b30e80eee4e0a4f963cb7540399179, type: 3}
-  gameOverSound: {fileID: 8300000, guid: b0a66bbecd5b6334999948a9d0c19eda, type: 3}
+  victorySound: {fileID: 8300000, guid: 8e39cca8636f2924fa7ccf0bb3a11384, type: 3}
+  gameOverSound: {fileID: 8300000, guid: fa0e382bc18d03f4b98ecdac0af658d0, type: 3}
 --- !u!1 &2488624277608223299
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7894813704590363363, guid: 8118b3aa7d164aa4c874dfd6e624d6c8, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 30b30e80eee4e0a4f963cb7540399179, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e39cca8636f2924fa7ccf0bb3a11384, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1004,7 +1004,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7894813704590363363, guid: 8118b3aa7d164aa4c874dfd6e624d6c8, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b0a66bbecd5b6334999948a9d0c19eda, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fa0e382bc18d03f4b98ecdac0af658d0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -48,8 +48,8 @@ public class OptionsMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(graphicsIndex);
     }
 
-    public void ActivateFullscreen(bool fullscreen)
+    public void ActivateFullscreen()
     {
-        Screen.fullScreen = fullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }

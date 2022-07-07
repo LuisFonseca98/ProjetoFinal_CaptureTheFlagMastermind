@@ -5,19 +5,22 @@ using UnityEngine.SceneManagement;
 
 public abstract class MenusManager: MonoBehaviour
 {
+
+    private float  timeScale = 1f;
     public void BackToMainMenu()
     {
         Debug.Log("Main Menu is back!");
+        Time.timeScale = timeScale;
         SceneManager.LoadScene("Menus");
-        Time.timeScale = 1f;
 
     }
 
     public void RestartLevel()
     {
         Debug.Log("Restart Level pls!");
+        Time.timeScale = timeScale;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
+
     }
 
     public void QuitGame()

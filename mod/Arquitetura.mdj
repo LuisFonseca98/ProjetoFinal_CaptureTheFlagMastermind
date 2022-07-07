@@ -384,7 +384,7 @@
 											"font": "Arial;13;0",
 											"left": 459.5,
 											"top": 163,
-											"width": 171.052734375,
+											"width": 170,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGArl7OBZHSKws="
@@ -583,7 +583,7 @@
 											"font": "Arial;13;0",
 											"left": 460.5,
 											"top": 252.5,
-											"width": 173.95361328125,
+											"width": 173,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGArl8XupIBRrs="
@@ -3725,7 +3725,7 @@
 											"font": "Arial;13;0",
 											"left": 355,
 											"top": 720.5,
-											"width": 168.96435546875,
+											"width": 168,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGA08UHBQeLGnQ="
@@ -6280,7 +6280,7 @@
 															"top": 362,
 															"width": 278.53515625,
 															"height": 13,
-															"text": "+ActivateFullscreen(fullscreen: bool)",
+															"text": "+ActivateFullscreen()",
 															"horizontalAlignment": 0
 														}
 													],
@@ -8424,18 +8424,7 @@
 											"_parent": {
 												"$ref": "AAAAAAGArb+LFYNiZUI="
 											},
-											"name": "ActivateFullscreen",
-											"parameters": [
-												{
-													"_type": "UMLParameter",
-													"_id": "AAAAAAGAreLU7xIfKQY=",
-													"_parent": {
-														"$ref": "AAAAAAGAreLRBhGsq/0="
-													},
-													"name": "fullscreen",
-													"type": "bool"
-												}
-											]
+											"name": "ActivateFullscreen"
 										}
 									]
 								},
@@ -23799,9 +23788,9 @@
 																		"$ref": "AAAAAAGAI+IppN52HFQ="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 64.72998046875,
+																	"left": 62.55908203125,
 																	"top": 5,
-																	"width": 118.06982421875,
+																	"width": 106.4091796875,
 																	"height": 13,
 																	"text": "InteragirMenuPausa"
 																},
@@ -23814,7 +23803,7 @@
 																	"font": "Arial;13;1",
 																	"left": 45,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -25802,9 +25791,9 @@
 																		"$ref": "AAAAAAGAKP4GUUSmZ7s="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 93.498046875,
+																	"width": 85.1064453125,
 																	"height": 13,
 																	"text": "Selecionar nível"
 																},
@@ -25817,7 +25806,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -27877,9 +27866,9 @@
 																		"$ref": "AAAAAAGAKP7K7UTF3lo="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 21,
-																	"width": 203.34423828125,
+																	"width": 180.03564453125,
 																	"height": 13,
 																	"text": "Selecao e Movimentacao de naves"
 																},
@@ -27892,7 +27881,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 21,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -29572,9 +29561,9 @@
 																		"$ref": "AAAAAAGAKQBM/ETld6c="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 94.1962890625,
+																	"width": 85.84912109375,
 																	"height": 13,
 																	"text": "Construir Naves"
 																},
@@ -29587,7 +29576,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -30973,9 +30962,9 @@
 																		"$ref": "AAAAAAGAKQCpvkUFgHY="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 146.25341796875,
+																	"width": 129.14013671875,
 																	"height": 13,
 																	"text": "Escolher estado da Nave"
 																},
@@ -30988,7 +30977,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -32795,9 +32784,9 @@
 																		"$ref": "AAAAAAGAHwLhKmJLYyk="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 32.72998046875,
+																	"left": 30.55908203125,
 																	"top": 21,
-																	"width": 97.09716796875,
+																	"width": 93.18701171875,
 																	"height": 13,
 																	"text": "ModificarVolume"
 																},
@@ -32810,7 +32799,7 @@
 																	"font": "Arial;13;1",
 																	"left": 13,
 																	"top": 21,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -34651,9 +34640,9 @@
 																		"$ref": "AAAAAAGA7POjIlgZRdg="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 32.72998046875,
+																	"left": 30.55908203125,
 																	"top": 13,
-																	"width": 145.50439453125,
+																	"width": 135.28466796875,
 																	"height": 13,
 																	"text": "ComoAtacarNaveInimiga"
 																},
@@ -34666,7 +34655,7 @@
 																	"font": "Arial;13;1",
 																	"left": 13,
 																	"top": 13,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
