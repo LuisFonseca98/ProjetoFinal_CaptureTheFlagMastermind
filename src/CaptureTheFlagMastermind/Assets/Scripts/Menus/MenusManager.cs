@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 public abstract class MenusManager: MonoBehaviour
 {
 
-    private float  timeScale = 1f;
     public void BackToMainMenu()
     {
         Debug.Log("Main Menu is back!");
-        Time.timeScale = timeScale;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menus");
 
     }
@@ -18,7 +17,7 @@ public abstract class MenusManager: MonoBehaviour
     public void RestartLevel()
     {
         Debug.Log("Restart Level pls!");
-        Time.timeScale = timeScale;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
