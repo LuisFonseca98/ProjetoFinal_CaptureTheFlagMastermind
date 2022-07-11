@@ -50,7 +50,7 @@ public class BulletBehaviourPlayer : MonoBehaviour, UtilsInterface
 
     public void Update()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnCollisionEnter(Collision collision)

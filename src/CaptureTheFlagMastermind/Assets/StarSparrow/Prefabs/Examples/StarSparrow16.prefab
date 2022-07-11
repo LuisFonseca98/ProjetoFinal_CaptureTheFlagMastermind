@@ -844,6 +844,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3d1a99dec7baa44949e2fec59be465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
   sightRange: 30
   attackRange: 15
   playerInSightRange: 0

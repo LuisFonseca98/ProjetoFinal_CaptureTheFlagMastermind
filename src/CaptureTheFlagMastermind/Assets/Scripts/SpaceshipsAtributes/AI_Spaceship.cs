@@ -6,19 +6,21 @@ using UnityEngine.AI;
 public class AI_Spaceship : MonoBehaviour
 {
  
-     //Variables for the attack state
+    //Variables for the attack state
     public NavMeshAgent agent;
-    private Transform enemyFleet;
+    public Transform enemyFleet;
     public LayerMask whatIsGround, whatIsEnemy;
 
     //Attacking
     public float timeBetweenAttacks;
     public GameObject projectile;
-    bool alreadyAttacked;
+    public bool alreadyAttacked;
 
     //States
     public float sightRange, attackRange;
     public bool enemyInSightRange, enemyInAttackRange;
+
+    public GameObject hipFireprojectile;
 
 
     public void Awake()
@@ -30,7 +32,6 @@ public class AI_Spaceship : MonoBehaviour
 
     void FixedUpdate()
     {
-
         enemyInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsEnemy);
         enemyInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsEnemy);
         if (enemyInSightRange && !enemyInAttackRange) ChaseEnemySpaceship();
@@ -42,7 +43,7 @@ public class AI_Spaceship : MonoBehaviour
 
     private void ChaseEnemySpaceship()
     {
-        Debug.Log("Entrei1");
+
         if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
         {
             agent.SetDestination(enemyFleet.transform.GetChild(0).position);
@@ -52,7 +53,7 @@ public class AI_Spaceship : MonoBehaviour
 
     private void AttackEnemySpaceship()
     {
-        Debug.Log("Entrei2");
+
         if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
         {
             agent.SetDestination(transform.position);
@@ -61,7 +62,8 @@ public class AI_Spaceship : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Debug.Log("Disparei!");
+            Rigidbody rb = Instantiate(projectile, hipFireprojectile.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
