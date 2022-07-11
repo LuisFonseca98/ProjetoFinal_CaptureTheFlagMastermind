@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6400861709145198265
 Transform:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 2321983535979774450}
   - component: {fileID: 566786084368921912}
   - component: {fileID: 1046597698722686714}
-  - component: {fileID: 1090793323119272934}
+  - component: {fileID: 4101377923829148759}
   m_Layer: 0
   m_Name: StarSparrow15
   m_TagString: enemy
@@ -222,7 +222,7 @@ Transform:
   m_Children:
   - {fileID: 6400861709145198265}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2321983535979774450
 MeshFilter:
@@ -298,11 +298,11 @@ MonoBehaviour:
   walkPointRange: 15
   timeBetweenAttacks: 0
   projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
-  sightRange: 0
-  attackRange: 0
+  sightRange: 30
+  attackRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!195 &1090793323119272934
+--- !u!195 &4101377923829148759
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

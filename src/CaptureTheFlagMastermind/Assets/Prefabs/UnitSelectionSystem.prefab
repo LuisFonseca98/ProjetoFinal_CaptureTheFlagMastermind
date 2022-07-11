@@ -92,6 +92,7 @@ MonoBehaviour:
   unitList: []
   unitsSelected: []
   displayInfoWindowSpaceship: {fileID: 0}
+  bg: {fileID: 0}
   nameSpaceship: {fileID: 0}
   accValue: {fileID: 0}
   velValue: {fileID: 0}

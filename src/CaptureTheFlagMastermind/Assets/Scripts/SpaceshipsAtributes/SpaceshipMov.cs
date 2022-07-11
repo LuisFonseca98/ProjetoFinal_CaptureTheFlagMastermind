@@ -39,8 +39,6 @@ public class SpaceshipMov : MonoBehaviour
         enemyInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsEnemy);
         if (enemyInSightRange && !enemyInAttackRange) ChaseEnemySpaceship();
         if (enemyInAttackRange && enemyInSightRange) AttackEnemySpaceship();
-
-        
         SendSpaceshipToLocation();
 
     }
@@ -57,10 +55,6 @@ public class SpaceshipMov : MonoBehaviour
                 myAgent.SetDestination(hit.point);
             }
         }
-
-        
-
-
 
     }
 
@@ -92,6 +86,7 @@ public class SpaceshipMov : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
+
     private void ResetAttack()
     {
         alreadyAttacked = false;

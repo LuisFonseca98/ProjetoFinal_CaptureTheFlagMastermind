@@ -734,6 +734,9 @@ GameObject:
   - component: {fileID: 7261555887914216991}
   - component: {fileID: 3526009638393012275}
   - component: {fileID: 6870771676789673067}
+  - component: {fileID: 1256628836854697526}
+  - component: {fileID: 5059813899159590555}
+  - component: {fileID: 3399738997618728442}
   m_Layer: 0
   m_Name: StarSparrow16
   m_TagString: Untagged
@@ -841,19 +844,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3d1a99dec7baa44949e2fec59be465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 3526009638393012275}
-  fleet: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 256
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 30
-  timeBetweenAttacks: 2
-  projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
   sightRange: 30
   attackRange: 15
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!114 &1256628836854697526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207265202862182346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7fc170d92dc004e864ac9f41131978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointSet: 0
+  walkPointRange: 5
+  agent: {fileID: 3526009638393012275}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &5059813899159590555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207265202862182346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d554f3ec8f0ba1c4e96f5a7c526f51e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 3
+  alreadyAttacked: 0
+  projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
+  fleet: {fileID: 0}
+  agent: {fileID: 3526009638393012275}
+--- !u!114 &3399738997618728442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207265202862182346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb5ba27eb38ea142b671706ad43866f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fleet: {fileID: 0}
+  agent: {fileID: 3526009638393012275}

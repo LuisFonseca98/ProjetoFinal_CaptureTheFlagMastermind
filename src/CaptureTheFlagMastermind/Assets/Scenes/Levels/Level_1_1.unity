@@ -128,38 +128,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2862774785114771470, guid: e133105cde8799c47944dd048a1927dc, type: 3}
   m_PrefabInstance: {fileID: 1210478743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &119523406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9207265202862182346, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
-  m_PrefabInstance: {fileID: 1890562797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &119523407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8398393378137052528, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
   m_PrefabInstance: {fileID: 1890562797}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &119523409
+--- !u!195 &119523413 stripped
 NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3526009638393012275, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+  m_PrefabInstance: {fileID: 1890562797}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119523406}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 5.299766
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.2459185
-  m_BaseOffset: 1.6229593
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &153845381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5135562318002145328, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
@@ -191,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_RootOrder
@@ -442,6 +420,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1699700032039439959, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
   m_PrefabInstance: {fileID: 828343734}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &378844189 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 4101377923829148759, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
+  m_PrefabInstance: {fileID: 828343734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &382030032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7337531005009025104, guid: e133105cde8799c47944dd048a1927dc, type: 3}
@@ -488,10 +471,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 919448311}
     m_Modifications:
+    - target: {fileID: 3399738997618728442, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+      propertyPath: fleet
+      value: 
+      objectReference: {fileID: 875941964}
     - target: {fileID: 4017055085774254113, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5059813899159590555, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+      propertyPath: fleet
+      value: 
+      objectReference: {fileID: 875941964}
     - target: {fileID: 6870771676789673067, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: fleet
       value: 
@@ -556,38 +547,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3620237724280345477, guid: e133105cde8799c47944dd048a1927dc, type: 3}
   m_PrefabInstance: {fileID: 1210478743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &637952344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9207265202862182346, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
-  m_PrefabInstance: {fileID: 695150514}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &637952345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8398393378137052528, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
   m_PrefabInstance: {fileID: 695150514}
   m_PrefabAsset: {fileID: 0}
---- !u!195 &637952347
+--- !u!195 &637952351 stripped
 NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3526009638393012275, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+  m_PrefabInstance: {fileID: 695150514}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637952344}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 5.299766
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 3.2459185
-  m_BaseOffset: 1.6229593
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1001 &695150514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,10 +565,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 919448311}
     m_Modifications:
+    - target: {fileID: 4017055085774254113, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6870771676789673067, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: agent
       value: 
-      objectReference: {fileID: 637952347}
+      objectReference: {fileID: 637952351}
     - target: {fileID: 6870771676789673067, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: fleet
       value: 
@@ -784,6 +757,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1046597698722686714, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 378844189}
+    - target: {fileID: 1046597698722686714, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
+      propertyPath: fleet
+      value: 
+      objectReference: {fileID: 875941964}
     - target: {fileID: 1412991390012617434, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -850,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079920311513257197, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2079920311513257197, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
       propertyPath: m_TagString
@@ -936,8 +917,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
 --- !u!1 &875941963
@@ -1158,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_RootOrder
@@ -2034,7 +2014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862774785281119013, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: timeValue
-      value: 3
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2862774785281119013, guid: e133105cde8799c47944dd048a1927dc, type: 3}
       propertyPath: unitSelectionSystem
@@ -2827,7 +2807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1593850269
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -3127,10 +3107,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 919448311}
     m_Modifications:
+    - target: {fileID: 4017055085774254113, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6870771676789673067, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: agent
       value: 
-      objectReference: {fileID: 119523409}
+      objectReference: {fileID: 119523413}
     - target: {fileID: 6870771676789673067, guid: 09980a6c8942f3141bbe411fa8a59755, type: 3}
       propertyPath: fleet
       value: 
@@ -3318,7 +3302,7 @@ Terrain:
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
-  m_DrawHeightmap: 0
+  m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
@@ -3510,7 +3494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7706704133163136415, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8389081787181379365, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
       propertyPath: m_IsActive
@@ -3583,7 +3567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433942057210488, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.9
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 4433942057210488, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3935,7 +3919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4197128655073178, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
       propertyPath: m_RootOrder
