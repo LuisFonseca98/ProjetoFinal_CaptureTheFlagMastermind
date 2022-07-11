@@ -14,7 +14,11 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
         if (collision.gameObject.CompareTag("BulletEnemy"))
         {
             TakeDamageFromEnemyBullet(10);
+        }
 
+        if (collision.gameObject.CompareTag("BulletAlly"))
+        {
+            TakeDamageFromEnemyBullet(10);
         }
     }
 

@@ -34,7 +34,8 @@ public class Attack : MonoBehaviour
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            StartCoroutine(nameof(ResetAttack));
         }
 
 
@@ -42,8 +43,11 @@ public class Attack : MonoBehaviour
 
 
 
-    public void ResetAttack(bool alreadyAttacked)
+    IEnumerator ResetAttack()
     {
+        Debug.Log("Yoink");
+        yield return new WaitForSeconds(timeBetweenAttacks);
         alreadyAttacked = false;
+
     }
 }
