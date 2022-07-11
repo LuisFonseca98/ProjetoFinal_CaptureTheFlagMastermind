@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
 
-public class EnemyAi : MonoBehaviour
+public class EnemyBehaviours : MonoBehaviour
 {
 
     private Patrolling patrol;
@@ -15,7 +15,7 @@ public class EnemyAi : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    private void Start()
+    void Start()
     {
         patrol = GetComponent<Patrolling>();
         chase = GetComponent<Chase>();
