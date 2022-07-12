@@ -1604,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &199392144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6683,7 +6683,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4293528289
   m_fontColor: {r: 0.882353, g: 0.039215688, b: 0.9176471, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
@@ -9465,7 +9465,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635601136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3664d184db7fc334fa08cdccac4cf4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -9489,7 +9489,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1433868878}
           m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_MethodName: Play
           m_Mode: 1
