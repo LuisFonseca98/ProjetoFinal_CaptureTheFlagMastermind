@@ -10,7 +10,7 @@ public class UnitSelections : MonoBehaviour
     public List<GameObject> unitsSelected = new List<GameObject>();
 
 
-    public GameObject displayInfoWindowSpaceship,bg;
+    public GameObject displayInfoWindowSpaceship;
     public TMP_Text nameSpaceship;
     public TMP_Text accValue;
     public TMP_Text velValue;
@@ -115,14 +115,14 @@ public class UnitSelections : MonoBehaviour
 
     public void ActiveWindowSpaceshipInfo()
     {
-        bg.SetActive(true);
+       
         displayInfoWindowSpaceship.SetActive(true);
 
     }
 
     public void DeactiveWindowSpaceshipInfo()
     {
-        bg.SetActive(false);
+        
         displayInfoWindowSpaceship.SetActive(false);
 
     }
