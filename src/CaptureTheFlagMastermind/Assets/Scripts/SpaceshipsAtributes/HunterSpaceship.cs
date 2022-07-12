@@ -15,11 +15,6 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
         {
             TakeDamageFromEnemyBullet(10);
         }
-
-        if (collision.gameObject.CompareTag("BulletAlly"))
-        {
-            TakeDamageFromEnemyBullet(10);
-        }
     }
 
     public void Update()
@@ -31,10 +26,10 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
     }
 
 
-    public void TakeDamageFromEnemyBullet(float damage)
+    public void TakeDamageFromEnemyBullet(float damageAlly)
     {
 
-        hunterHP -= damage;
+        hunterHP -= damageAlly;
         healthBar.fillAmount = hunterHP/100;
         AudioManager.instance.DamageSound();
 

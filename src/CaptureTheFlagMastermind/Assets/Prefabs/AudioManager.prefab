@@ -187,6 +187,8 @@ MonoBehaviour:
   victorySource: {fileID: 1732652640829063796}
   explosionAudioSource: {fileID: 4838330473302421537}
   damageAudioSource: {fileID: 8969903600250935191}
+  mouseOverSource: {fileID: 6005869996860655229}
+  clickButtonSource: {fileID: 4089977053482060644}
   clickAudio:
   - {fileID: 8300000, guid: 773f731da4234f24bb68a8d34ebb93eb, type: 3}
   - {fileID: 8300000, guid: 31fdf10dd0d023b42b6ae8f6045195bf, type: 3}
@@ -194,6 +196,8 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: e81ae6a804250c445931b1a41131ad9d, type: 3}
   victorySound: {fileID: 8300000, guid: 8e39cca8636f2924fa7ccf0bb3a11384, type: 3}
   gameOverSound: {fileID: 8300000, guid: fa0e382bc18d03f4b98ecdac0af658d0, type: 3}
+  mouseOverSound: {fileID: 8300000, guid: 7082aa91476434073809693d3d5988a6, type: 3}
+  clickButtonSound: {fileID: 8300000, guid: ef669a1b5273c4dd29d968d26ea198c0, type: 3}
 --- !u!1 &2488624277608223299
 GameObject:
   m_ObjectHideFlags: 0

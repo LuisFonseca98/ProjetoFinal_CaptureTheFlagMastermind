@@ -8,7 +8,7 @@ public interface Spaceship
 
     void Update();
 
-    void TakeDamageFromEnemyBullet(float damage);
+    void TakeDamageFromEnemyBullet(float damageAlly);
 
     void Die();
 

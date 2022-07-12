@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 1256628836854697526}
   - component: {fileID: 5059813899159590555}
   - component: {fileID: 3399738997618728442}
+  - component: {fileID: 5673957207814967110}
   m_Layer: 0
   m_Name: StarSparrow16
   m_TagString: Untagged
@@ -901,3 +902,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fleet: {fileID: 0}
   agent: {fileID: 3526009638393012275}
+--- !u!65 &5673957207814967110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207265202862182346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.147294, y: 3.2459185, z: 10.599532}
+  m_Center: {x: 0, y: 0, z: 0}

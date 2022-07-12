@@ -19,7 +19,7 @@ public class VictoryMenu : MenusManager
 
     public void ActiveVictoryScreen()
     {
-        Time.timeScale = 0f;
+        AudioManager.instance.MainMenuSound();
         victoryScreen.SetActive(true);
         playerUI.SetActive(false);
         unitSelectionSystem.SetActive(false);
@@ -27,7 +27,6 @@ public class VictoryMenu : MenusManager
 
     public void LoadNextLevel()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

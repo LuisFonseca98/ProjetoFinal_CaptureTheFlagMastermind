@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+
 public class AudioManager : MonoBehaviour
 {
 
@@ -18,7 +19,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource victorySource;
     [SerializeField] AudioSource explosionAudioSource;
     [SerializeField] AudioSource damageAudioSource;
-    //[SerializeField] AudioSource mouseOverBtnSource;
+    [SerializeField] AudioSource mouseOverSource;
+    [SerializeField] AudioSource clickButtonSource;
 
     //audio clips 
     [SerializeField] List<AudioClip> clickAudio = new List<AudioClip>();
@@ -26,7 +28,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip damageSound;
     [SerializeField] AudioClip victorySound;
     [SerializeField] AudioClip gameOverSound;
-    //[SerializeField] AudioClip mouseOverBtnClip;
+    [SerializeField] AudioClip mouseOverSound;
+    [SerializeField] AudioClip clickButtonSound;
+
 
 
     public const string MUSIC_KEY = "Music";
@@ -104,5 +108,17 @@ public class AudioManager : MonoBehaviour
     {
         damageAudioSource.Stop();
     }
+
+    public void PlayMouseOverSound()
+    {
+        mouseOverSource.Play();
+    }
+
+    public void PlayClickSound()
+    {
+        clickButtonSource.Play();
+    }
+
+
 
 }

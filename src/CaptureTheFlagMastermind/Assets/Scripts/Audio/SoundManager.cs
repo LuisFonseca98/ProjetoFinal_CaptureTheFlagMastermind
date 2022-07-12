@@ -41,7 +41,9 @@ public class SoundManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat(AudioManager.MUSIC_KEY,musicSlider.value);
         PlayerPrefs.SetFloat(AudioManager.SFX_KEY, sfxSlider.value);
+        DontDestroyOnLoad(this);
     }
+
 
 
 
