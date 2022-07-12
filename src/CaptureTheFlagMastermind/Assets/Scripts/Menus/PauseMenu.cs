@@ -47,6 +47,15 @@ public class PauseMenu : MenusManager
         pauseMode = true;
     }
 
+    public void BackToMainMenuPauseMenu()
+    {
+        Time.timeScale = 1f;
+        AudioManager.instance.MainMenuSound();
+        Debug.Log("Main Menu is back!");
+        SceneManager.LoadScene("Menus");
+
+    }
+
     public void ShowOptionsMenu()
     {
         optionsMenu.SetActive(true);    
