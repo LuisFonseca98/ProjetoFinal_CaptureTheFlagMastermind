@@ -55,9 +55,9 @@ public class BulletBehaviourPlayer : MonoBehaviour, UtilsInterface
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Clickable") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") || collision.gameObject.CompareTag("enemy"))
         {
-            Debug.Log("Balla Inimiga Destruída!");
+            Debug.Log("Balla Aliada Destruída!");
             Destroy(gameObject);
         }
     }

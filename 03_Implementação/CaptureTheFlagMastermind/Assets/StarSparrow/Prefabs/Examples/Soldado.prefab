@@ -121,19 +121,6 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 128
-  agent: {fileID: 4618117488998484132}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 0
-  timeBetweenAttacks: 2
-  projectile: {fileID: 0}
-  sightRange: 75
-  attackRange: 50
-  enemyInSightRange: 0
-  enemyInAttackRange: 0
 --- !u!195 &4618117488998484132
 NavMeshAgent:
   m_ObjectHideFlags: 0

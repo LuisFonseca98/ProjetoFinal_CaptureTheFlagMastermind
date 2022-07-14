@@ -9,7 +9,6 @@ public class UnitSelections : MonoBehaviour
     public List<GameObject> unitList = new List<GameObject>();
     public List<GameObject> unitsSelected = new List<GameObject>();
 
-
     public GameObject displayInfoWindowSpaceship;
     public TMP_Text nameSpaceship;
     public TMP_Text accValue;
