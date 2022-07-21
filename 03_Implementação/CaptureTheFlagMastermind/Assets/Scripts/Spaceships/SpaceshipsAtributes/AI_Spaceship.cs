@@ -5,10 +5,9 @@ using UnityEngine.AI;
 
 public class AI_Spaceship : MonoBehaviour
 {
- 
+
     //Variables for the attack state
     public NavMeshAgent agent;
-    public Transform enemyFleet;
     public LayerMask whatIsGround, whatIsEnemy;
 
     //Attacking
@@ -25,44 +24,46 @@ public class AI_Spaceship : MonoBehaviour
 
     public void Awake()
     {
-        enemyFleet = GameObject.Find("EnemyFleet").transform;
         agent = GetComponent<NavMeshAgent>();
-               
+
     }
 
     void FixedUpdate()
     {
-        enemyInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsEnemy);
-        enemyInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsEnemy);
-        if (enemyInSightRange && !enemyInAttackRange) ChaseEnemySpaceship();
-        if (enemyInAttackRange && enemyInSightRange) AttackEnemySpaceship();
+
+        Collider[] collidersSightRange = Physics.OverlapSphere(transform.position, sightRange, whatIsEnemy);
+        Collider[] collidersAttackRange = Physics.OverlapSphere(transform.position, attackRange, whatIsEnemy);
+
+        //Check for sight and attack range
+        enemyInSightRange = collidersSightRange.Length > 0;
+        enemyInAttackRange = collidersAttackRange.Length > 0;
+
         
+        if (enemyInSightRange && !enemyInAttackRange) ChaseEnemySpaceship(collidersSightRange[0]);
+        if (enemyInAttackRange && enemyInSightRange) AttackEnemySpaceship(collidersAttackRange[0]);
+
 
     }
 
 
-    private void ChaseEnemySpaceship()
+    private void ChaseEnemySpaceship(Collider collider)
     {
 
-        if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
-        {
-            agent.SetDestination(enemyFleet.transform.GetChild(0).position);
-        }
+
+        agent.SetDestination(collider.transform.position);
+
+
 
     }
 
-    private void AttackEnemySpaceship()
+    private void AttackEnemySpaceship(Collider collider)
     {
+        agent.SetDestination(transform.position);
+        transform.LookAt(collider.transform.position);
 
-        if (enemyFleet.transform.Find("EnemySoldier") || enemyFleet.transform.Find("EnemyHunter") || enemyFleet.transform.Find("EnemyMothership"))
-        {
-            agent.SetDestination(transform.position);
-            transform.LookAt(enemyFleet.transform.GetChild(0).position);
-        }
 
         if (!alreadyAttacked)
         {
-            Debug.Log("Disparei!");
             Rigidbody rb = Instantiate(projectile, hipFireprojectile.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             alreadyAttacked = true;

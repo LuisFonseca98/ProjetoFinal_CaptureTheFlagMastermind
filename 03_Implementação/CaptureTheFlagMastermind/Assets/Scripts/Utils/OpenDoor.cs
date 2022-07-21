@@ -6,7 +6,7 @@ public class OpenDoor : MonoBehaviour,UtilsInterface
 {
     public GameObject Door;
 
-    public void OnCollisionEnter(Collision collision){ throw new System.NotImplementedException(); }
+    public void OnCollisionEnter(Collision collision){}
 
     public void OnTriggerEnter(Collider other)
     {

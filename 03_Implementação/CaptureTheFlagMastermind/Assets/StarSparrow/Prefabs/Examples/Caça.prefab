@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2670097484237210346}
-  hunterHP: 125
+  hunterHP: 10
 --- !u!114 &8980031419483861498
 MonoBehaviour:
   m_ObjectHideFlags: 0

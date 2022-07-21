@@ -9,9 +9,9 @@ public class SpaceshipMov : MonoBehaviour
     NavMeshAgent myAgent;
     public LayerMask ground;
 
-  
-    
-    private void Awake()
+
+
+    void Awake()
     {
         myAgent = GetComponent<NavMeshAgent>();
         cam = Camera.main;
@@ -20,7 +20,7 @@ public class SpaceshipMov : MonoBehaviour
     void Update()
     {
 
-               SendSpaceshipToLocation();
+        SendSpaceshipToLocation();
 
     }
 
@@ -40,6 +40,6 @@ public class SpaceshipMov : MonoBehaviour
     }
 
 
-    
+
 
 }

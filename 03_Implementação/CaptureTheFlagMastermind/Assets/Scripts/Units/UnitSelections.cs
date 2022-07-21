@@ -17,10 +17,6 @@ public class UnitSelections : MonoBehaviour
     private static UnitSelections _instance;
     public static UnitSelections Instance { get { return _instance; } }
 
-
-    //private GameObject particles;
-
-
     public void Awake()
     {
         //if an instance of this already exists and it isnt this one
@@ -38,18 +34,25 @@ public class UnitSelections : MonoBehaviour
 
     public void ClickSelect(GameObject unitToAdd)
     {
+        RemoveUnitFromList();
         DeselectAll();
+        ActiveWindowSpaceshipInfo();
+        ObtainSpaceshipInfo();
+
         unitsSelected.Add(unitToAdd);
         unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
         unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
         unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
-        ActiveWindowSpaceshipInfo();
-        ObtainSpaceshipInfo();
+
     }
 
     public void ShiftClickSelect(GameObject unitToAdd)
     {
+
+        RemoveUnitFromList();
+
+
         if (!unitsSelected.Contains(unitToAdd))
         {
             unitsSelected.Add(unitToAdd);
@@ -71,6 +74,7 @@ public class UnitSelections : MonoBehaviour
 
     public void DragSelect(GameObject unitToAdd)
     {
+        RemoveUnitFromList();
         if (!unitsSelected.Contains(unitToAdd))
         {
             DeactiveWindowSpaceshipInfo();
@@ -84,6 +88,7 @@ public class UnitSelections : MonoBehaviour
 
     public void DeselectAll()
     {
+        RemoveUnitFromList();
         foreach (var unit in unitsSelected)
         {
             DeactiveWindowSpaceshipInfo();
@@ -98,6 +103,12 @@ public class UnitSelections : MonoBehaviour
 
     public void Deselect(GameObject unitToDeselect)
     {
+        DeactiveWindowSpaceshipInfo();
+        unitToDeselect.GetComponent<SpaceshipMov>().enabled = false;
+        unitToDeselect.transform.GetChild(0).gameObject.SetActive(false);
+        unitToDeselect.transform.GetChild(3).gameObject.SetActive(false);
+        unitToDeselect.transform.GetChild(4).gameObject.SetActive(false);
+        unitsSelected.Remove(unitToDeselect);
 
     }
 
@@ -107,8 +118,6 @@ public class UnitSelections : MonoBehaviour
         nameSpaceship.text = unitsSelected[0].name;
         accValue.text = unitsSelected[0].GetComponent<NavMeshAgent>().speed.ToString();
         velValue.text = unitsSelected[0].GetComponent<NavMeshAgent>().acceleration.ToString();
-
-
     }
 
 
@@ -124,6 +133,18 @@ public class UnitSelections : MonoBehaviour
         
         displayInfoWindowSpaceship.SetActive(false);
 
+    }
+
+    public void RemoveUnitFromList()
+    {
+        for (int i = unitList.Count - 1; i >= 0; i--)
+        {
+            if (unitList[i] == null && unitsSelected.Count >= 0)
+            {
+                unitList.RemoveAt(unitList.Count - 1);
+                unitList[i] = unitList[unitList.Count - 1];
+            }
+        }
     }
 
 
