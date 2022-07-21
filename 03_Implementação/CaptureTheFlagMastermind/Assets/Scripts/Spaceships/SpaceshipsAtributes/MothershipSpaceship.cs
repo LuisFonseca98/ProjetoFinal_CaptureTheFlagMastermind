@@ -17,17 +17,6 @@ public class MothershipSpaceship : MonoBehaviour, Spaceship
         }
     }
 
-    public void Update()
-    {
-
-        if (mothershipHP <= 0)
-        {
-            Die();
-        }
-
-
-    }
-
 
     public void TakeDamage(float damage)
     {
@@ -36,12 +25,15 @@ public class MothershipSpaceship : MonoBehaviour, Spaceship
         healthBar.fillAmount = mothershipHP / 100;
         AudioManager.instance.DamageSound();
 
+        if (mothershipHP <= 0) Die();
+        
+
     }
 
     public void Die()
     {
-        GetComponent<GameOverMenu>().enabled = true;
         AudioManager.instance.ExplosionSound();
+        GetComponent<GameOverMenu>().enabled = true;
     }
 
 

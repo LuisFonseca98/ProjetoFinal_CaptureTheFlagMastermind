@@ -34,23 +34,21 @@ public class UnitSelections : MonoBehaviour
 
     public void ClickSelect(GameObject unitToAdd)
     {
-        RemoveUnitFromList();
+        
         DeselectAll();
-        ActiveWindowSpaceshipInfo();
-        ObtainSpaceshipInfo();
-
+      
         unitsSelected.Add(unitToAdd);
         unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
         unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
         unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
+        ActiveWindowSpaceshipInfo();
+        ObtainSpaceshipInfo();
 
     }
 
     public void ShiftClickSelect(GameObject unitToAdd)
     {
-
-        RemoveUnitFromList();
 
 
         if (!unitsSelected.Contains(unitToAdd))
@@ -60,7 +58,6 @@ public class UnitSelections : MonoBehaviour
             unitToAdd.transform.GetChild(3).gameObject.SetActive(true);
             unitToAdd.transform.GetChild(4).gameObject.SetActive(true);
             unitToAdd.GetComponent<SpaceshipMov>().enabled = true;
-            ActiveWindowSpaceshipInfo();
         }
         else
         {
@@ -74,7 +71,6 @@ public class UnitSelections : MonoBehaviour
 
     public void DragSelect(GameObject unitToAdd)
     {
-        RemoveUnitFromList();
         if (!unitsSelected.Contains(unitToAdd))
         {
             DeactiveWindowSpaceshipInfo();
@@ -88,7 +84,6 @@ public class UnitSelections : MonoBehaviour
 
     public void DeselectAll()
     {
-        RemoveUnitFromList();
         foreach (var unit in unitsSelected)
         {
             DeactiveWindowSpaceshipInfo();
@@ -114,10 +109,14 @@ public class UnitSelections : MonoBehaviour
 
     public void ObtainSpaceshipInfo()
     {
-        if (unitsSelected.Count > 1 || unitsSelected.Count == 0 || unitsSelected == null) return;
-        nameSpaceship.text = unitsSelected[0].name;
+
+        if (unitsSelected.Count > 1 || unitsSelected.Count == 0  || unitsSelected == null) return;
+        Debug.Log("info sp 1");
+        nameSpaceship.SetText(unitsSelected[0].name);
         accValue.text = unitsSelected[0].GetComponent<NavMeshAgent>().speed.ToString();
         velValue.text = unitsSelected[0].GetComponent<NavMeshAgent>().acceleration.ToString();
+        Debug.Log("info sp 2");
+
     }
 
 
@@ -135,14 +134,14 @@ public class UnitSelections : MonoBehaviour
 
     }
 
-    public void RemoveUnitFromList()
+    public void RemoveUnitFromList(GameObject unit)
     {
         for (int i = unitList.Count - 1; i >= 0; i--)
         {
-            if (unitList[i] == null && unitsSelected.Count >= 0)
+            if ((unitList[i] == unit && unitsSelected.Count >= 0) || unit == null)
             {
-                unitList.RemoveAt(unitList.Count - 1);
                 unitList[i] = unitList[unitList.Count - 1];
+                unitList.RemoveAt(unitList.Count - 1);
             }
         }
     }

@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip gameOverSound;
     [SerializeField] AudioClip mouseOverSound;
     [SerializeField] AudioClip clickButtonSound;
+    [SerializeField] AudioClip explosionSound;
 
 
 
@@ -76,7 +77,7 @@ public class AudioManager : MonoBehaviour
 
     public void ExplosionSound()
     {
-     explosionAudioSource.PlayOneShot(damageSound);
+     explosionAudioSource.PlayOneShot(explosionSound);
     }
 
     public void VictorySound()

@@ -5,20 +5,13 @@ using UnityEngine;
 public class EnemyMothershipSpaceship : MonoBehaviour,Spaceship
 {
     public float enemyMothershipHP = 1;
-    public void Die()
-    {
-        GetComponent<VictoryMenu>().enabled = true;
-        AudioManager.instance.ExplosionSound();
-    }
+
 
     public void TakeDamage(float damage)
     {
         enemyMothershipHP -= damage;
-    }
-
-    public void Update()
-    {
         if (enemyMothershipHP <= 0) Die();
+
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -27,5 +20,11 @@ public class EnemyMothershipSpaceship : MonoBehaviour,Spaceship
         {
             TakeDamage(10);
         }
+    }
+
+    public void Die()
+    {
+        GetComponent<VictoryMenu>().enabled = true;
+        AudioManager.instance.ExplosionSound();
     }
 }

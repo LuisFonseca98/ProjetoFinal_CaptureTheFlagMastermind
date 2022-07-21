@@ -198,6 +198,7 @@ MonoBehaviour:
   gameOverSound: {fileID: 8300000, guid: fa0e382bc18d03f4b98ecdac0af658d0, type: 3}
   mouseOverSound: {fileID: 8300000, guid: 7082aa91476434073809693d3d5988a6, type: 3}
   clickButtonSound: {fileID: 8300000, guid: ef669a1b5273c4dd29d968d26ea198c0, type: 3}
+  explosionSound: {fileID: 8300000, guid: 159654ecfcb0f3141937e97ab974b381, type: 3}
 --- !u!1 &2488624277608223299
 GameObject:
   m_ObjectHideFlags: 0

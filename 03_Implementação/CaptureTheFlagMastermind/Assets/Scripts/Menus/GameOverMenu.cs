@@ -9,9 +9,7 @@ public class GameOverMenu : MenusManager
     public GameObject playerUI;
     public GameObject unitSelectionSystem;
 
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         ActiveGameOverMenu();
     }
@@ -19,7 +17,7 @@ public class GameOverMenu : MenusManager
 
     public void ActiveGameOverMenu()
     {
-
+        Time.timeScale = 0f;
         endGameScreen.SetActive(true);
         playerUI.SetActive(false);
         unitSelectionSystem.SetActive(false);

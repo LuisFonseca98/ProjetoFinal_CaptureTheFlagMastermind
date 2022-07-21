@@ -10,16 +10,16 @@ public class VictoryMenu : MenusManager
     public GameObject playerUI;
     public GameObject unitSelectionSystem;
 
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
+        AudioManager.instance.StopMainMenuSound();
         ActiveVictoryScreen();
     }
 
     public void ActiveVictoryScreen()
     {
-        AudioManager.instance.MainMenuSound();
+        Time.timeScale = 0f;
+        AudioManager.instance.VictorySound();
         victoryScreen.SetActive(true);
         playerUI.SetActive(false);
         unitSelectionSystem.SetActive(false);
@@ -27,6 +27,7 @@ public class VictoryMenu : MenusManager
 
     public void LoadNextLevel()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

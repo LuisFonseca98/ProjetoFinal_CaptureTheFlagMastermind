@@ -17,27 +17,24 @@ public class SoldierSpaceship : MonoBehaviour, Spaceship
         }
     }
 
-    public void Update()
-    {
-
-        if (soldierHP <= 0) Die();
-
-
-    }
-
 
     public void TakeDamage(float damage)
     {
+
 
         soldierHP -= damage;
         healthBar.fillAmount = soldierHP / 100;
         AudioManager.instance.DamageSound();
 
+        if (soldierHP <= 0) Die();
+
     }
 
     public void Die()
     {
-        Destroy(gameObject);
         AudioManager.instance.ExplosionSound();
+        UnitSelections.Instance.RemoveUnitFromList(gameObject);
+        UnitSelections.Instance.Deselect(gameObject);
+        Destroy(gameObject);
     }
 }

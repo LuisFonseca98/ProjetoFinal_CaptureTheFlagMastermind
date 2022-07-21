@@ -20,8 +20,9 @@ public class EnemyHunterSpaceship : MonoBehaviour, Spaceship
 
     public void Die()
     {
-        Destroy(gameObject);
         AudioManager.instance.ExplosionSound();
+        Destroy(gameObject);
+        
     }
 
     public void OnCollisionEnter(Collision collision)

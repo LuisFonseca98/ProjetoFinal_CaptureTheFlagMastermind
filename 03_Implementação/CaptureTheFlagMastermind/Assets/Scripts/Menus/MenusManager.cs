@@ -8,6 +8,7 @@ public abstract class MenusManager: MonoBehaviour
 
     public void BackToMainMenu()
     {
+        Time.timeScale = 1f;
         AudioManager.instance.MainMenuSound();
         Debug.Log("Main Menu is back!");
         SceneManager.LoadScene("Menus");
@@ -16,6 +17,7 @@ public abstract class MenusManager: MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1f;
         AudioManager.instance.MainMenuSound();
         Debug.Log("Restart Level pls!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

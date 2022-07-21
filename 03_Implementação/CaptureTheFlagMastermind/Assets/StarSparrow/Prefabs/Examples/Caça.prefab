@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 8971796953413797668}
-  enemyFleet: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128

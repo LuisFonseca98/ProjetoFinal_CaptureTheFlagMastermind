@@ -37,10 +37,10 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
 
     public void Die()
     {
-        UnitSelections.Instance.Deselect(gameObject);
-        UnitSelections.Instance.RemoveUnitFromList();
-        Destroy(gameObject);
         AudioManager.instance.ExplosionSound();
+        UnitSelections.Instance.RemoveUnitFromList(gameObject);
+        UnitSelections.Instance.Deselect(gameObject);
+        Destroy(gameObject);
     }
 
 }
