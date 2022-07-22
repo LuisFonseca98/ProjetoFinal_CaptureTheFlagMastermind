@@ -21,6 +21,7 @@ public class GameOverMenu : MenusManager
         endGameScreen.SetActive(true);
         playerUI.SetActive(false);
         unitSelectionSystem.SetActive(false);
+        AudioManager.instance.GameOverSound();
     }
 
 

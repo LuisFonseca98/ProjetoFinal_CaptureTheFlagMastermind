@@ -20,7 +20,7 @@ public class LevelLoader : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        loadSceneIndex = SelectLevelsMenu.getIndexScene();
+        //loadSceneIndex = SelectLevelsMenu.getIndexScene();
 
         if (loadSceneIndex == 2)
         {

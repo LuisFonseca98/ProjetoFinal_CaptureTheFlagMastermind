@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
-  walkPointRange: 0
+  walkPointRange: 5
   agent: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb5ba27eb38ea142b671706ad43866f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleet: {fileID: 0}
   agent: {fileID: 5381031227876997847}
 --- !u!114 &7561068669040499364
 MonoBehaviour:
@@ -233,5 +232,5 @@ MonoBehaviour:
   timeBetweenAttacks: 0.5
   alreadyAttacked: 0
   projectile: {fileID: 638634334751071329, guid: b20eeadda557de740807f82842f1f218, type: 3}
-  fleet: {fileID: 0}
   agent: {fileID: 5381031227876997847}
+  hipfire: {fileID: 0}

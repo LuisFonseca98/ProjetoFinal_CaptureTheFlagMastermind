@@ -384,7 +384,7 @@
 											"font": "Arial;13;0",
 											"left": 459.5,
 											"top": 163,
-											"width": 171.052734375,
+											"width": 170,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGArl7OBZHSKws="
@@ -583,7 +583,7 @@
 											"font": "Arial;13;0",
 											"left": 460.5,
 											"top": 252.5,
-											"width": 173.95361328125,
+											"width": 173,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGArl8XupIBRrs="
@@ -3725,7 +3725,7 @@
 											"font": "Arial;13;0",
 											"left": 355,
 											"top": 720.5,
-											"width": 168.96435546875,
+											"width": 168,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGA08UHBQeLGnQ="
@@ -9755,13 +9755,30 @@
 															"height": 13,
 															"text": "+mainMenuSound: AudioClip",
 															"horizontalAlignment": 0
+														},
+														{
+															"_type": "UMLAttributeView",
+															"_id": "AAAAAAGCIb9LAxsWlZM=",
+															"_parent": {
+																"$ref": "AAAAAAGAvr5b6Hrq+TM="
+															},
+															"model": {
+																"$ref": "AAAAAAGCIb9K7BsT8vo="
+															},
+															"font": "Arial;13;0",
+															"left": 541,
+															"top": 486,
+															"width": 218.61962890625,
+															"height": 13,
+															"text": "+explosionSound: AudioClip",
+															"horizontalAlignment": 0
 														}
 													],
 													"font": "Arial;13;0",
 													"left": 536,
 													"top": 241,
 													"width": 228.61962890625,
-													"height": 248
+													"height": 263
 												},
 												{
 													"_type": "UMLOperationCompartmentView",
@@ -9784,7 +9801,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 494,
+															"top": 509,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+Awake()",
@@ -9801,7 +9818,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 509,
+															"top": 524,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+LoadVolume()",
@@ -9818,7 +9835,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 524,
+															"top": 539,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+GenerateRandomAudioClip()",
@@ -9835,7 +9852,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 539,
+															"top": 554,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+DamageSound()",
@@ -9852,7 +9869,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 554,
+															"top": 569,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+ExplosionSound()",
@@ -9869,7 +9886,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 569,
+															"top": 584,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+GameOverSound()",
@@ -9886,7 +9903,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 584,
+															"top": 599,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+VictorySound()",
@@ -9903,7 +9920,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 599,
+															"top": 614,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+MainMenuSound()",
@@ -9920,7 +9937,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 614,
+															"top": 629,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+StopMainMenuSound()",
@@ -9937,7 +9954,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 629,
+															"top": 644,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+StopExplosionSound()",
@@ -9954,7 +9971,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 644,
+															"top": 659,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+StopDamageSound()",
@@ -9971,7 +9988,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 659,
+															"top": 674,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+PlayMouseOverSound()",
@@ -9988,7 +10005,7 @@
 															},
 															"font": "Arial;13;0",
 															"left": 541,
-															"top": 674,
+															"top": 689,
 															"width": 218.61962890625,
 															"height": 13,
 															"text": "+PlayClickSound()",
@@ -9997,7 +10014,7 @@
 													],
 													"font": "Arial;13;0",
 													"left": 536,
-													"top": 489,
+													"top": 504,
 													"width": 228.61962890625,
 													"height": 203
 												},
@@ -10039,7 +10056,7 @@
 											"left": 536,
 											"top": 216,
 											"width": 228.61962890625,
-											"height": 476,
+											"height": 491,
 											"nameCompartment": {
 												"$ref": "AAAAAAGAvr5b6Hrl78c="
 											},
@@ -10821,6 +10838,15 @@
 												"$ref": "AAAAAAGAvr5b53riDak="
 											},
 											"name": "mainMenuSound",
+											"type": "AudioClip"
+										},
+										{
+											"_type": "UMLAttribute",
+											"_id": "AAAAAAGCIb9K7BsT8vo=",
+											"_parent": {
+												"$ref": "AAAAAAGAvr5b53riDak="
+											},
+											"name": "explosionSound",
 											"type": "AudioClip"
 										}
 									],
@@ -24140,6 +24166,7 @@
 														"$ref": "AAAAAAGCIK5viMeIRWI="
 													},
 													"name": "enemyHunterHP",
+													"type": "",
 													"defaultValue": "70;"
 												}
 											]
@@ -24159,6 +24186,7 @@
 														"$ref": "AAAAAAGCIK6wOcezlqw="
 													},
 													"name": "enemyMothershipHP",
+													"type": "",
 													"defaultValue": "100"
 												}
 											]
@@ -24178,6 +24206,7 @@
 														"$ref": "AAAAAAGCIK7qrsfgeuE="
 													},
 													"name": "enemySoldierHP",
+													"type": "",
 													"defaultValue": "80"
 												}
 											]
@@ -27342,9 +27371,9 @@
 																		"$ref": "AAAAAAGAI+IppN52HFQ="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 64.72998046875,
+																	"left": 62.55908203125,
 																	"top": 5,
-																	"width": 118.06982421875,
+																	"width": 106.4091796875,
 																	"height": 13,
 																	"text": "InteragirMenuPausa"
 																},
@@ -27357,7 +27386,7 @@
 																	"font": "Arial;13;1",
 																	"left": 45,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -29348,9 +29377,9 @@
 																		"$ref": "AAAAAAGAKP4GUUSmZ7s="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 93.498046875,
+																	"width": 85.1064453125,
 																	"height": 13,
 																	"text": "Selecionar nível"
 																},
@@ -29363,7 +29392,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -31423,9 +31452,9 @@
 																		"$ref": "AAAAAAGAKP7K7UTF3lo="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 21,
-																	"width": 203.34423828125,
+																	"width": 180.03564453125,
 																	"height": 13,
 																	"text": "Selecao e Movimentacao de naves"
 																},
@@ -31438,7 +31467,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 21,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -33118,9 +33147,9 @@
 																		"$ref": "AAAAAAGAKQBM/ETld6c="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 94.1962890625,
+																	"width": 85.84912109375,
 																	"height": 13,
 																	"text": "Construir Naves"
 																},
@@ -33133,7 +33162,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -34519,9 +34548,9 @@
 																		"$ref": "AAAAAAGAKQCpvkUFgHY="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 232.20703125,
+																	"width": 214.7001953125,
 																	"height": 13,
 																	"text": "ComoAtacarNaveInimigaCasoUtilizacao"
 																},
@@ -34534,7 +34563,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -36268,9 +36297,9 @@
 																		"$ref": "AAAAAAGAHwLhKmJLYyk="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 32.72998046875,
+																	"left": 30.55908203125,
 																	"top": 21,
-																	"width": 97.09716796875,
+																	"width": 93.18701171875,
 																	"height": 13,
 																	"text": "ModificarVolume"
 																},
@@ -36283,7 +36312,7 @@
 																	"font": "Arial;13;1",
 																	"left": 13,
 																	"top": 21,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
@@ -38124,9 +38153,9 @@
 																		"$ref": "AAAAAAGA7POjIlgZRdg="
 																	},
 																	"font": "Arial;13;0",
-																	"left": 24.72998046875,
+																	"left": 22.55908203125,
 																	"top": 5,
-																	"width": 209.1015625,
+																	"width": 188.70654296875,
 																	"height": 13,
 																	"text": "EscolherEstadoNaveCasoUtilizacao"
 																},
@@ -38139,7 +38168,7 @@
 																	"font": "Arial;13;1",
 																	"left": 5,
 																	"top": 5,
-																	"width": 14.72998046875,
+																	"width": 12.55908203125,
 																	"height": 13,
 																	"text": "sd"
 																}
