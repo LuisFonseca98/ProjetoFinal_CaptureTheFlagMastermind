@@ -918,8 +918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 3
   alreadyAttacked: 0
-  projectile: {fileID: 1259865673663102, guid: 5dfd241454cb1c94f87efc0a347cc956, type: 3}
-  fleet: {fileID: 0}
+  projectile: {fileID: 1259865673663102, guid: 7b1ffa4a31fa4174d94dbdfedf9c9e65, type: 3}
   agent: {fileID: 3526009638393012275}
   hipfire: {fileID: 699016169607909365}
 --- !u!114 &3399738997618728442
@@ -934,7 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb5ba27eb38ea142b671706ad43866f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fleet: {fileID: 0}
   agent: {fileID: 3526009638393012275}
 --- !u!65 &5673957207814967110
 BoxCollider:

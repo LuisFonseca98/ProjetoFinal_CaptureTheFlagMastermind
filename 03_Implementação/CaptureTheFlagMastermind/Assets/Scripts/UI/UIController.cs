@@ -15,7 +15,7 @@ public class UIController : MonoBehaviour,UIInterface
 
     [Header("Player UI")]
     public float timeValue = 300;
-    public float reputationValue = 150;
+    public static float reputationValue = 150;
     [SerializeField] bool stopIncreasingReputation;
 
     [Header("Reference variables")]
@@ -47,8 +47,8 @@ public class UIController : MonoBehaviour,UIInterface
     {
         if (reputationValue >= 50)
         {
-            reputationValue -= 50;
             Instantiate(soldierSpaceship, parentSoldierSpaceship.position, Quaternion.identity);
+            reputationValue -= 50;
         }
     }
 
@@ -57,8 +57,8 @@ public class UIController : MonoBehaviour,UIInterface
     {
         if (reputationValue >= 100)
         {
-            reputationValue -= 100;
             Instantiate(hunterSpaceship, parentHunterSpaceship.position, Quaternion.identity);
+            reputationValue -= 100;
         }
     }
 
@@ -95,7 +95,7 @@ public class UIController : MonoBehaviour,UIInterface
         while (stopIncreasingReputation)
         {
             yield return new WaitForSeconds(1);
-            reputationValue += 2;
+            reputationValue += 0.1f;
         }
     }
 

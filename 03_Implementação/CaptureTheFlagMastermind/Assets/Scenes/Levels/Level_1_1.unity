@@ -704,10 +704,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6019289297225271550, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6019289297225271550, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: enemyFleet
       value: 
       objectReference: {fileID: 919448311}
@@ -1382,10 +1378,10 @@ Transform:
   m_Children:
   - {fileID: 1406494627}
   - {fileID: 1350336823}
+  - {fileID: 378844184}
   - {fileID: 2061409338}
   - {fileID: 119523407}
   - {fileID: 637952345}
-  - {fileID: 378844184}
   - {fileID: 984766704}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1461,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 3060088426372616897, guid: 481351381d17b144594f0cceef6ef608, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702674117038796, guid: 481351381d17b144594f0cceef6ef608, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56.9
       objectReference: {fileID: 0}
     - target: {fileID: 6719959572860341039, guid: 481351381d17b144594f0cceef6ef608, type: 3}
       propertyPath: fleet
@@ -3297,10 +3297,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2079920311513257197, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
-      propertyPath: m_TagString
-      value: enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 2873535397343303510, guid: 7ea0027aa6205b044b76dc341d565c7f, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -3980,10 +3976,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 6019289297225271550, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6212563281532098354, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -4635,6 +4627,10 @@ PrefabInstance:
     - target: {fileID: 3299573011177838401, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522209937508825414, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56.88
       objectReference: {fileID: 0}
     - target: {fileID: 4725172217095043339, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
       propertyPath: m_SizeDelta.x

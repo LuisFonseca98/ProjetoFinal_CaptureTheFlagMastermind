@@ -6,14 +6,24 @@ using UnityEngine.UI;
 public class MothershipSpaceship : MonoBehaviour, Spaceship
 {
     public Image healthBar;
-    public static float mothershipHP = 200;
+    //public static float mothershipHP = 200;
+    public static float mothershipHP = 10;
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("BulletEnemy"))
+        if (collision.gameObject.CompareTag("MissileEnemyHunter"))
         {
-            TakeDamage(200);
+            TakeDamage(10);
+        }
 
+        if (collision.gameObject.CompareTag("MissileEnemySoldier"))
+        {
+            TakeDamage(25);
+        }
+
+        if (collision.gameObject.CompareTag("MissileEnemyMothership"))
+        {
+            TakeDamage(75);
         }
     }
 
@@ -32,7 +42,6 @@ public class MothershipSpaceship : MonoBehaviour, Spaceship
 
     public void Die()
     {
-        AudioManager.instance.ExplosionSound();
         GetComponent<GameOverMenu>().enabled = true;
     }
 

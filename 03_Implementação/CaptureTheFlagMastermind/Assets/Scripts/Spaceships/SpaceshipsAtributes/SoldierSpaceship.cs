@@ -6,14 +6,24 @@ using UnityEngine.UI;
 public class SoldierSpaceship : MonoBehaviour, Spaceship
 {
     public Image healthBar;
-    public float soldierHP = 125;
+    //public float soldierHP = 125;
+    public float soldierHP = 10;
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("BulletEnemy"))
+        if (collision.gameObject.CompareTag("MissileEnemyHunter"))
         {
             TakeDamage(10);
+        }
 
+        if (collision.gameObject.CompareTag("MissileEnemySoldier"))
+        {
+            TakeDamage(25);
+        }
+
+        if (collision.gameObject.CompareTag("MissileEnemyMothership"))
+        {
+            TakeDamage(75);
         }
     }
 

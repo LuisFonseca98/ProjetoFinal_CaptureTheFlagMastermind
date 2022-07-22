@@ -150,7 +150,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   timeBetweenAttacks: 5
-  projectile: {fileID: 1259865673663102, guid: 8b227e0429c621940acb9e2e8d18d12f, type: 3}
+  projectile: {fileID: 1259865673663102, guid: 3267a76a406348b4c9accdb0001c5070, type: 3}
   alreadyAttacked: 0
   sightRange: 35
   attackRange: 25

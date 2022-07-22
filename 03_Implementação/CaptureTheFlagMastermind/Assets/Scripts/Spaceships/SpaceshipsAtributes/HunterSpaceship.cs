@@ -7,22 +7,25 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
 {
 
     public Image healthBar;
-    public float hunterHP = 75;
+    //public float hunterHP = 75;
+    public float hunterHP = 10;
 
     public  void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("BulletEnemy"))
+        if (collision.gameObject.CompareTag("MissileEnemyHunter"))
         {
             TakeDamage(10);
         }
-    }
 
-    public void Update()
-    {
+        if (collision.gameObject.CompareTag("MissileEnemySoldier"))
+        {
+            TakeDamage(25);
+        }
 
-        if (hunterHP <= 0) Die();
-
-        
+        if (collision.gameObject.CompareTag("MissileEnemyMothership"))
+        {
+            TakeDamage(75);
+        }
     }
 
 
@@ -32,6 +35,8 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
         hunterHP -= damage;
         healthBar.fillAmount = hunterHP/100;
         AudioManager.instance.DamageSound();
+        if (hunterHP <= 0) Die();
+
 
     }
 

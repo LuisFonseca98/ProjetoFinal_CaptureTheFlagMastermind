@@ -10,7 +10,9 @@ TagManager:
   - Bullet
   - Obstacule
   - BulletEnemy
-  - BulletAlly
+  - MissileHunter
+  - MissileSoldier
+  - MissileMothership
   layers:
   - Default
   - TransparentFX
