@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMothershipSpaceship : MonoBehaviour,Spaceship
 {
-    public float enemyMothershipHP = 1;
+    public float enemyMothershipHP = 10;
     //public float enemyMothershipHP = 200;
 
     public void TakeDamage(float damage)

@@ -10,7 +10,7 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
     //public float hunterHP = 75;
     public float hunterHP = 10;
 
-    public  void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("MissileEnemyHunter"))
         {

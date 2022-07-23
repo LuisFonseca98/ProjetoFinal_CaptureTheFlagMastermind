@@ -11,6 +11,7 @@ public class EnemySoldierSpaceship : MonoBehaviour, Spaceship
     public void Die()
     {
         AudioManager.instance.ExplosionSound();
+        UIController.reputationValue += 20;
         Destroy(gameObject);
 
     }

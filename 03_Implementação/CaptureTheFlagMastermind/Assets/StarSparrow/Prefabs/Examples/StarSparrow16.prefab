@@ -899,7 +899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
-  walkPointRange: 5
+  walkPointRange: 10
   agent: {fileID: 3526009638393012275}
   whatIsGround:
     serializedVersion: 2

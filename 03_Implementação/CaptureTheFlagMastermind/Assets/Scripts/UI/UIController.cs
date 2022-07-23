@@ -95,7 +95,7 @@ public class UIController : MonoBehaviour,UIInterface
         while (stopIncreasingReputation)
         {
             yield return new WaitForSeconds(1);
-            reputationValue += 0.1f;
+            reputationValue += 2f;
         }
     }
 

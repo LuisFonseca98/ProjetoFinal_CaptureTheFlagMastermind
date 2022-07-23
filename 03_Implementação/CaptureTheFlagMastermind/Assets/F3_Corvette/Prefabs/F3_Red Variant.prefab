@@ -165,11 +165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
-  walkPointRange: 5
-  agent: {fileID: 0}
+  walkPointRange: 20
+  agent: {fileID: 5381031227876997847}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &5009507675140511442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   sightRange: 30
-  attackRange: 15
+  attackRange: 25
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!114 &7868541521134253259

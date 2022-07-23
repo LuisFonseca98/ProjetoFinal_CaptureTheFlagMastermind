@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class SelectLevelsMenu : MonoBehaviour
 {
 
-    //para mudar entre as diferentes cenas:
     //1º usar o package "UnityEngine.SceneManagement"
     //2º Usar SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1)
     // SceneManager.LoadScene(SceneManager.LoadScene(1))

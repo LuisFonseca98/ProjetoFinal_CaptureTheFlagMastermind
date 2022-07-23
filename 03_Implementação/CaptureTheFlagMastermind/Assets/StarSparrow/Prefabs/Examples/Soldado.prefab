@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 33871795789200940}
   - component: {fileID: 23729984508991034}
   - component: {fileID: 6460891205733646157}
+  - component: {fileID: 4120364297208423001}
   - component: {fileID: 7328866134223065277}
+  - component: {fileID: 498921805262823446}
   - component: {fileID: 4618117488998484132}
   - component: {fileID: 466401729275562916}
-  - component: {fileID: 4120364297208423001}
   - component: {fileID: 3207357854011887680}
-  - component: {fileID: 498921805262823446}
   m_Layer: 8
   m_Name: Soldado
   m_TagString: Player
@@ -108,6 +108,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e0534a1cd7b4544834e884abdbf286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4120364297208423001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734771206656390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4360f8f529fcb458d89781bb2261a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1243707684074345502}
+  soldierHP: 125
 --- !u!114 &7328866134223065277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +137,33 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &498921805262823446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734771206656390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a446287cc1c35a34599a10c4d274fc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 4618117488998484132}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 512
+  timeBetweenAttacks: 5
+  projectile: {fileID: 1259865673663102, guid: 8b227e0429c621940acb9e2e8d18d12f, type: 3}
+  alreadyAttacked: 0
+  sightRange: 35
+  attackRange: 25
+  enemyInSightRange: 0
+  enemyInAttackRange: 0
+  hipFireprojectile: {fileID: 4828743523116372793}
 --- !u!195 &4618117488998484132
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -158,20 +199,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.745908, y: 2.880384, z: 13.023569}
   m_Center: {x: 0, y: -0.000014603138, z: -0.0000023841858}
---- !u!114 &4120364297208423001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734771206656390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4360f8f529fcb458d89781bb2261a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1243707684074345502}
-  soldierHP: 125
 --- !u!54 &3207357854011887680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -188,33 +215,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &498921805262823446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734771206656390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a446287cc1c35a34599a10c4d274fc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 4618117488998484132}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 512
-  timeBetweenAttacks: 5
-  projectile: {fileID: 1259865673663102, guid: 8b227e0429c621940acb9e2e8d18d12f, type: 3}
-  alreadyAttacked: 0
-  sightRange: 35
-  attackRange: 25
-  enemyInSightRange: 0
-  enemyInAttackRange: 0
-  hipFireprojectile: {fileID: 4828743523116372793}
 --- !u!1 &574565713136896465
 GameObject:
   m_ObjectHideFlags: 0
