@@ -770,9 +770,9 @@ GameObject:
   - component: {fileID: 3399738997618728442}
   - component: {fileID: 5673957207814967110}
   - component: {fileID: 3136200845335573911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StarSparrow16
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

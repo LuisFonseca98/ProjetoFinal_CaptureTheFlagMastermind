@@ -13,6 +13,10 @@ TagManager:
   - MissileHunter
   - MissileSoldier
   - MissileMothership
+  - MissileEnemyHunter
+  - MissileEnemySoldier
+  - MissileEnemyMothership
+  - TurretBullet
   layers:
   - Default
   - TransparentFX

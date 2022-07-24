@@ -14,16 +14,22 @@ public class MothershipSpaceship : MonoBehaviour, Spaceship
         if (collision.gameObject.CompareTag("MissileEnemyHunter"))
         {
             TakeDamage(10);
+            Destroy(collision.gameObject);
+
         }
 
         if (collision.gameObject.CompareTag("MissileEnemySoldier"))
         {
             TakeDamage(25);
+            Destroy(collision.gameObject);
+
         }
 
         if (collision.gameObject.CompareTag("MissileEnemyMothership"))
         {
             TakeDamage(75);
+            Destroy(collision.gameObject);
+
         }
     }
 

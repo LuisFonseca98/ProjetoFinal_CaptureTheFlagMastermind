@@ -39,6 +39,11 @@ public class SpaceshipMov : MonoBehaviour
 
     }
 
+    public void SetLocation(Vector3 position)
+    {
+        myAgent.SetDestination(position);
+    }
+
 
 
 

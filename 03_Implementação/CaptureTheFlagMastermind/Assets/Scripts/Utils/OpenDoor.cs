@@ -10,7 +10,7 @@ public class OpenDoor : MonoBehaviour,UtilsInterface
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Collider>().gameObject.layer == LayerMask.NameToLayer("Clickable") || other.gameObject.CompareTag("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Clickable") || other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Yay2!");
             Door.SetActive(false);

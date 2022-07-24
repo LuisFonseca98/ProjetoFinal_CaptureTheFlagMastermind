@@ -29,16 +29,22 @@ public class EnemySoldierSpaceship : MonoBehaviour, Spaceship
         if (collision.gameObject.CompareTag("MissileHunter"))
         {
             TakeDamage(10);
+            Destroy(collision.gameObject);
+
         }
 
         if (collision.gameObject.CompareTag("MissileSoldier"))
         {
             TakeDamage(25);
+            Destroy(collision.gameObject);
+
         }
 
         if (collision.gameObject.CompareTag("MissileMothership"))
         {
             TakeDamage(75);
+            Destroy(collision.gameObject);
+
         }
     }
 

@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 6126970105813362105}
   - component: {fileID: 2876964101445103989}
   - component: {fileID: 6936264724177531273}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StarSparrow15
   m_TagString: enemy
   m_Icon: {fileID: 0}

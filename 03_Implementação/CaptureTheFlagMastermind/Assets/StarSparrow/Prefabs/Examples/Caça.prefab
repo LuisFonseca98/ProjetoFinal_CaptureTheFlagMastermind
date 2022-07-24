@@ -149,7 +149,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 1.5
   projectile: {fileID: 1259865673663102, guid: 3267a76a406348b4c9accdb0001c5070, type: 3}
   alreadyAttacked: 0
   sightRange: 35
