@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySoldierSpaceship : MonoBehaviour, Spaceship
 {
-    public float enemySoldierHP = 10;
-    //public float enemySoldierHP = 125;
+    //public float enemySoldierHP = 10;
+    public float enemySoldierHP = 125;
     //valor de destruicao para a reputacao: 20 pontos
 
     public void Die()

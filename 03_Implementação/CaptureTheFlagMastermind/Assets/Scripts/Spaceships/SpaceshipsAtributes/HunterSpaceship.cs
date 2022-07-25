@@ -7,8 +7,8 @@ public class HunterSpaceship : MonoBehaviour, Spaceship
 {
 
     public Image healthBar;
-    //public float hunterHP = 75;
-    public float hunterHP = 10;
+    public float hunterHP = 75;
+    //public float hunterHP = 10;
 
     public void OnCollisionEnter(Collision collision)
     {

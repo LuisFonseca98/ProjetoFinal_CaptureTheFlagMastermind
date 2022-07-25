@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class SoldierSpaceship : MonoBehaviour, Spaceship
 {
     public Image healthBar;
-    //public float soldierHP = 125;
-    public float soldierHP = 10;
+    public float soldierHP = 125;
+    //public float soldierHP = 10;
 
     public void OnCollisionEnter(Collision collision)
     {

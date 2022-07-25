@@ -174,7 +174,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 55.859932
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -214,8 +214,8 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
-  sightRange: 30
-  attackRange: 25
+  sightRange: 25
+  attackRange: 24
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!114 &7868541521134253259
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d554f3ec8f0ba1c4e96f5a7c526f51e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1.1
   alreadyAttacked: 0
   projectile: {fileID: 1259865673663102, guid: 6376fbabd140e8d40adb59f21eccf44d, type: 3}
   agent: {fileID: 5381031227876997847}
